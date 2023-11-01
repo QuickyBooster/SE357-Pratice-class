@@ -1,0 +1,23 @@
+@startuml
+!define actor class
+
+actor Customer as "Customer"
+actor Staff as "Staff"
+
+rectangle "E-commerce System" {
+  Customer --> (Select Products)
+  Customer --> (View Promotions)
+  Customer --> (Make Purchases)
+  (Make Purchases) --> (Online Payment)
+  (Make Purchases) --> (In-store Payment)
+  Customer --> (Receive Goods)
+  (Receive Goods) --> (At Store)
+  (Receive Goods) --> (Delivery Service)
+  Staff --> (Manage Business Activities)
+  (Manage Business Activities) --> (Quantity of Goods in Stock)
+  (Manage Business Activities) --> (Order Management)
+  (Manage Business Activities) --> (Delivery Status)
+  (Manage Business Activities) --> (Payment)
+}
+
+@enduml
