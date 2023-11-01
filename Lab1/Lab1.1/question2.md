@@ -114,3 +114,21 @@ Are there any drawbacks to using certain tools in requirements engineering activ
 - Interpretation Challenges: The data collected through ethnographic observation may be qualitative in nature and subject to interpretation. Ensuring the accurate interpretation of the data can be challenging.
 
 - Heisenberg Uncertainty Principle: As mentioned in your description, the Heisenberg uncertainty principle suggests that the act of observing a system can alter that system. In the context of requirements engineering, this means that the presence of the observer may lead to changes in the observed processes or behaviors, potentially providing a distorted picture of the situation.
+
+7. Goal-Based Approaches
+
+- Ambiguity in Goals: Defining clear and unambiguous goals can be challenging. Different stakeholders may interpret goals differently, leading to misunderstandings and potential conflicts during the requirements elicitation process.
+
+- Goal Decomposition Complexity: Decomposing high-level goals into lower-level goals and requirements can be a complex and time-consuming process, especially for large and complex systems. The process requires careful analysis and consideration.
+
+- Subjectivity in Metrics: The choice of metrics for assessing whether goals are met can be subjective. Different individuals or teams may have different opinions on what metrics are relevant or how to measure them, which can lead to disagreements.
+
+- Lack of Precision: Some goals may be stated in broad and imprecise terms, making it challenging to derive specific and testable requirements. For example, the goal of "user-friendliness" may need to be broken down into more precise and measurable criteria.
+
+- Incomplete Coverage: The process of goal decomposition and deriving requirements may not always cover all aspects of the system. Some critical requirements or objectives may be missed if not explicitly stated in the goals.
+
+- Difficulty in Validation: Ensuring that the system satisfies the goals can be challenging. While metrics are defined, it may still be difficult to demonstrate their satisfaction, especially for subjective or qualitative goals.
+
+- Complex Metrics: Some goals may lead to the definition of complex metrics that are difficult to measure or verify. This can result in challenges during the validation and testing phases.
+
+- Evolving Goals: Over the course of a project, goals and priorities may change. Adapting to these changes and keeping the requirements aligned with evolving goals can be a challenge.
