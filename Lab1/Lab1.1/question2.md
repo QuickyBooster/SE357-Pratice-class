@@ -146,3 +146,20 @@ Are there any drawbacks to using certain tools in requirements engineering activ
 - Ineffective leadership and interpersonal skills: Running effective group meetings requires strong leadership, organizational, and interpersonal skills. Not everyone is naturally adept at facilitating and managing group discussions, and these skills need to be developed over time.
 
 - Ownership and participation: The passage mentions that allowing a few individuals to dominate the meeting can lead to others feeling "left out." This issue can create a sense of imbalance and dissatisfaction among attendees, potentially affecting the quality of the requirements elicitation process.
+
+9. Interviews
+- Subjectivity: Interviews rely on the perceptions and interpretations of the interviewees. Different stakeholders may have different viewpoints, which can introduce subjectivity into the requirements gathering process. This subjectivity can lead to misunderstandings and misinterpretations of the requirements.
+
+- Limited Scope: Interviews are limited by the scope of the questions asked. If important questions are omitted or if interviewers fail to ask probing questions, critical requirements may be overlooked. It's essential to ensure that all relevant questions are asked during the interview.
+
+- Withholding Information: As mentioned in the passage, in structured interviews, some stakeholders may withhold information because the format is too controlled. This can be a drawback as not all relevant information is shared, potentially leading to incomplete or inaccurate requirements.
+
+- Time and Resource Intensive: Conducting interviews can be time-consuming and resource-intensive, especially if there are multiple stakeholders involved or if the interviewees are dispersed geographically. This can impact the efficiency of the requirements elicitation process.
+
+- Bias and Prejudice: Interviews can be influenced by biases and prejudices, whether conscious or unconscious. Interviewers and interviewees may have preconceived notions that can affect the objectivity of the requirements gathering process.
+
+- Communication Barriers: In cases where interviews are conducted remotely (e.g., via telephone or email), there may be communication barriers, such as misinterpretation of tone and non-verbal cues. This can lead to misunderstandings and miscommunication.
+
+- Inaccessibility of Users or Customers: In situations where users or customers are not readily accessible for interviews, alternative methods may be needed, which can be less effective in gathering requirements.
+
+- Documentation and Record-Keeping: It's crucial to document and record the information gathered during interviews accurately. Failure to do so can result in the loss of valuable insights and requirements.
