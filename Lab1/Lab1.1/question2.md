@@ -151,3 +151,26 @@ Are there any drawbacks to using certain tools in requirements engineering activ
 
 - Incompatibility with Waterfall Models: Although user stories were designed for agile methodologies, some teams attempt to use them in a waterfall model, which may not align well with the structured and sequential nature of the waterfall approach. This can lead to confusion and inefficiencies.
 
+9. Workshops
+
+- Time and Resource Intensive: Workshops can consume a significant amount of time and resources, particularly if they involve multiple stakeholders. Preparing for, conducting, and documenting the outcomes of workshops can be resource-intensive.
+
+- Limited Participation: In formal workshops, the participation of key stakeholders is often mandated, but in informal workshops, attendance may be less structured. There is a risk that critical stakeholders may not attend, leading to incomplete or biased requirements gathering.
+
+- Group Dynamics: Workshops involve group discussions and decision-making. Group dynamics, such as dominant voices or conflicts among participants, can influence the outcomes and potentially hinder effective requirements elicitation.
+
+- Information Overload: Workshops can generate a large amount of information and ideas in a short period. It may be challenging to process and prioritize this information, leading to potential oversights or missing critical requirements.
+
+- Potential for False Consensus: Informal workshops, as mentioned, may lead to a false sense of security. Agreement during a workshop does not necessarily mean a shared understanding of requirements. Stakeholders might agree without fully grasping the implications, leading to misunderstandings.
+
+- Lack of Follow-up: After the workshop, there might be insufficient follow-up to document and track the requirements gathered. This can result in valuable information being lost or forgotten.
+
+- Limited Flexibility: Workshops require a structured format, which may not be suitable for all projects or situations. Some projects may benefit more from one-on-one interviews or surveys, which offer greater flexibility.
+
+- Difficulties with Remote Participants: In an increasingly global and remote work environment, it can be challenging to conduct effective workshops when participants are geographically dispersed. Communication and engagement may suffer in such scenarios.
+
+- Risk of Scope Creep: Workshops can lead to the introduction of new ideas or features that were not initially considered. While this can be beneficial, it also carries the risk of scope creep, which can impact project timelines and budgets.
+
+- Lack of Documentation: Informal workshops, in particular, may lack proper documentation. Without clear records of the discussions and decisions, it can be challenging to verify requirements and make changes later in the project.
+
+- Variability in Quality: The quality of workshops can vary depending on the facilitator's skills and participants' attitudes. Inexperienced facilitators may struggle to manage discussions effectively, impacting the quality of the requirements elicitation process.
