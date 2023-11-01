@@ -1,3 +1,5 @@
+How can tools enable distributed, global requirements engineering activities? What are the drawbacks in this regard?
+
 Advantages:
 
 - Communicating with Customers and Other Stakeholders: 
