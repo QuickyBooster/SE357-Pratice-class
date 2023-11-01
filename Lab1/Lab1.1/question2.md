@@ -1,7 +1,6 @@
 Are there any drawbacks to using certain tools in requirements engineering activities?
 
 1. Brainstorming
-Some of the potential drawbacks and challenges of brainstorming include:
 
 - Groupthink: In a group brainstorming session, there is a risk of groupthink, where participants may conform to popular ideas or suppress dissenting opinions. This can lead to a lack of diversity in generated ideas.
 
@@ -20,7 +19,6 @@ Some of the potential drawbacks and challenges of brainstorming include:
 - Resource Intensive: Facilitating a brainstorming session effectively may require a facilitator, an ideas recorder, and a proper place and time, which can be resource-intensive.
 
 2. Card Sorting
-Card sorting is a valuable technique for gathering and organizing requirements, but like any method, it has its potential drawbacks:
 
 - Limited Stakeholder Representation: Card sorting typically involves a selected group of stakeholders or customers. If the selected stakeholders do not represent the full range of end-users, important requirements might be missed.
 
@@ -39,7 +37,6 @@ Card sorting is a valuable technique for gathering and organizing requirements, 
 - Iterative Nature: The iterative nature of card sorting, with multiple rounds of card generation and review, can lead to increased time and effort for both the requirements engineer and stakeholders.
 
 3. Crowdsourcing
- The highlighted challenges are as follows:
 
 - Quality and Reliability: The quality of requirements obtained through crowdsourcing can vary significantly. Not all participants may have a deep understanding of the system or its requirements, which can result in inaccurate or incomplete input. Some contributors may not take the process seriously, leading to unreliable information.
 
@@ -61,3 +58,22 @@ Card sorting is a valuable technique for gathering and organizing requirements, 
 
 - Bias and Self-Selection: Some individuals may be more motivated to participate in crowdsourcing, while others might not. This self-selection can introduce bias in the requirements collected.
 
+4. Designer as Apprentice
+
+- Dependency on the Customer's Ability to Articulate Needs: The technique assumes that customers can effectively communicate their needs as they work, which may not always be the case. Some customers may struggle to articulate their requirements or may not be aware of all the subtleties in their work. This can lead to misunderstandings and incomplete requirements.
+
+- Limited Scalability: This approach may be less practical for larger or more complex projects where there are multiple customers or a wide range of requirements. It may be challenging for a single designer to serve as an apprentice to all customers effectively.
+
+- Time and Resource Intensive: Having a designer closely involved with each customer can be time-consuming and resource-intensive. It may not be feasible for every project, particularly when the designer's time is in high demand.
+
+- Subjectivity and Bias: Depending on the designer's understanding and interpretation of the customer's work, there may be a risk of introducing their own biases or misinterpreting the customer's needs. This could lead to a solution that doesn't accurately reflect the customer's requirements.
+
+- Incomplete Documentation: The approach focuses on observation and learning from the customer, which might result in incomplete or informal documentation of requirements. This could pose challenges in the future for project maintenance, change management, or knowledge transfer.
+
+- Lack of a Systematic Process: The "Designer as apprentice" approach is somewhat informal and depends heavily on individual interactions between the designer and customer. It may lack a structured and repeatable process for requirement discovery.
+
+- Limited Flexibility: While this approach emphasizes learning from the customer, it may not be well-suited for situations where customers are looking for innovative solutions that go beyond their current practices.
+
+- Potential Communication Challenges: The success of this technique relies on effective communication between the designer and the customer. If there are communication barriers, misunderstandings, or conflicts, it could impede the requirements discovery process.
+
+- Assumption of a Single Designer: The technique assumes that a single designer can serve as the apprentice to the customer, but in reality, multiple designers may be involved in a project, which can complicate the process.
