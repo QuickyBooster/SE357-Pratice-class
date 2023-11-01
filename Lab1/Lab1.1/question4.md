@@ -1,12 +1,13 @@
 Advantages:
 
-- Remote Collaboration: Tools such as online collaboration platforms and virtual meeting software enable teams distributed across the globe to collaborate in real-time. This allows for discussions, reviews, and decision-making without the need for physical presence.
+- Communicating with Customers and Other Stakeholders: 
+    Knowledge-acquisition and knowledge-sharing processes that enable the exploration of stakeholders’ needs, the application domain and possible technical solutions;
+    Iterative processes that allow the reshaping of this understanding throughout the entire project; 
+    Effective communication and coordination processes that support the first two types of processes listed.
 
 - Document Sharing and Version Control: Cloud-based tools facilitate the sharing and version control of requirement documents, ensuring that all team members have access to the latest information. This reduces the risk of working with outdated or conflicting requirements.
 
 - Traceability: Requirements management tools can provide traceability features, making it easier to link and track requirements, changes, and their dependencies, even in a distributed environment.
-
-- Access to Stakeholders: Online tools can facilitate communication with global stakeholders and allow them to participate in requirement discussions and reviews, even if they are in different time zones.
 
 - Automation and Notifications: Requirements tools often offer automation features like notifications and alerts for changes or updates to requirements. This helps ensure that all team members are informed promptly.
 
