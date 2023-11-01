@@ -40,13 +40,24 @@ Card sorting is a valuable technique for gathering and organizing requirements, 
 
 3. Crowdsourcing
  The highlighted challenges are as follows:
-Challenges related to largeness
-Challenges related to diversity
-Challenges related to anonymity
-Challenges related to competence
-Challenges related to collaboration
-Challenges related to intrinsic motivations
-Challenges related to volunteering
-Challenges related to extrinsic incentives
-Challenges related to opt-out opportunity
-Challenges related to feedback
+
+- Quality and Reliability: The quality of requirements obtained through crowdsourcing can vary significantly. Not all participants may have a deep understanding of the system or its requirements, which can result in inaccurate or incomplete input. Some contributors may not take the process seriously, leading to unreliable information.
+
+- Diverse and Conflicting Opinions: When requirements are gathered from a large and diverse crowd, it can be challenging to reconcile conflicting opinions and preferences. What one group of users wants may be different from another, making it difficult to prioritize requirements effectively.
+
+- Lack of Expertise: Crowdsourcing may not capture domain-specific expertise that experienced professionals or subject matter experts can provide. Critical requirements might be overlooked due to a lack of specialized knowledge.
+
+- Anonymity and Trust: The anonymity of contributors can be both an advantage and a drawback. While anonymity allows for honest feedback, it can also lead to concerns about trust and accountability. It might be challenging to validate the credentials and expertise of participants.
+
+- Communication Challenges: Managing communication with a large crowd can be complex. Questions might be misinterpreted, and obtaining clarification can be difficult. Effective two-way communication may be challenging.
+
+- Volume of Data: Crowdsourcing can generate a vast amount of data, which can be overwhelming to process and analyze. Handling and making sense of the data efficiently can be a significant challenge.
+
+- Privacy and Security: Depending on the nature of the system, there might be privacy and security concerns when involving a large crowd. Sensitive information might be exposed unintentionally.
+
+- Motivation and Participation: Ensuring consistent participation and motivation from the crowd can be a challenge. Contributors may lose interest over time, resulting in incomplete requirements or discontinuation of their involvement.
+
+- Management and Oversight: Effective oversight and management of the crowdsourcing process are essential. Without clear guidelines and mechanisms for monitoring and controlling the process, it may become chaotic and unproductive.
+
+- Bias and Self-Selection: Some individuals may be more motivated to participate in crowdsourcing, while others might not. This self-selection can introduce bias in the requirements collected.
+
