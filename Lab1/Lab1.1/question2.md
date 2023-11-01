@@ -132,3 +132,17 @@ Are there any drawbacks to using certain tools in requirements engineering activ
 - Complex Metrics: Some goals may lead to the definition of complex metrics that are difficult to measure or verify. This can result in challenges during the validation and testing phases.
 
 - Evolving Goals: Over the course of a project, goals and priorities may change. Adapting to these changes and keeping the requirements aligned with evolving goals can be a challenge.
+
+8. Group Work
+
+- Difficulty in organizing: Group meetings can be challenging to organize, especially when there are many stakeholders involved. Coordinating schedules and ensuring that all relevant parties can participate can be a logistical challenge.
+
+- Focus issues: It can be challenging to keep all participants focused on the relevant issues during group meetings. Some attendees may veer off-topic or become distracted, which can hinder the productive discussion of requirements.
+
+- Problems of openness and candor: People may not always express their true feelings or concerns openly in a public forum. This can lead to a lack of transparency and honesty during group meetings, as participants may be reluctant to share sensitive information or criticisms.
+
+- Dominance of certain individuals: In group meetings, there is a risk that a few individuals with dominant personalities can take over the discussion, potentially sidelining others who may have valuable insights. This can lead to feelings of exclusion and frustration among some attendees.
+
+- Ineffective leadership and interpersonal skills: Running effective group meetings requires strong leadership, organizational, and interpersonal skills. Not everyone is naturally adept at facilitating and managing group discussions, and these skills need to be developed over time.
+
+- Ownership and participation: The passage mentions that allowing a few individuals to dominate the meeting can lead to others feeling "left out." This issue can create a sense of imbalance and dissatisfaction among attendees, potentially affecting the quality of the requirements elicitation process.
