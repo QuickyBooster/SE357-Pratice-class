@@ -82,3 +82,49 @@ Are there any drawbacks to using certain tools in requirements engineering activ
 - Evolutionary Prototyping Challenges: While evolutionary prototyping can be effective, it requires careful management to ensure that the prototype evolves into the final system in a controlled and efficient manner. Without proper control and planning, it can lead to scope creep and project delays.
 
 - Limited Applicability to Niche Systems: Prototyping may not be as useful for specialized systems where the requirements are highly dependent on unique industry standards or regulations that cannot be effectively addressed through prototyping alone.
+
+6. Questionnaires/Surveys
+
+- Bias and Misinterpretation: Surveys can introduce bias based on how questions are framed or presented. If questions are not carefully designed, they can lead to misinterpretation, and respondents may not provide accurate or meaningful responses. This can result in requirements that don't truly reflect stakeholder needs.
+
+- Lack of Detail: Surveys tend to be less detailed compared to other requirements elicitation methods like interviews or workshops. They may not capture the full context or nuances of stakeholder requirements, leading to incomplete or superficial information.
+
+- Difficulty in Eliciting Complex Requirements: Complex requirements, especially those involving intricate business rules or system interactions, can be challenging to elicit through surveys. Stakeholders may struggle to express complex ideas in a structured questionnaire.
+
+- Scope Creep: As mentioned in the provided text, open-ended survey questions can encourage scope creep. Stakeholders may introduce new ideas or features that were not originally considered, leading to project scope expansion and potential delays.
+
+- Response Rate and Representativeness: Achieving a high response rate in surveys can be difficult, and low response rates can lead to a lack of representativeness in the collected data. The views of key stakeholders may be underrepresented or omitted.
+
+- The Ice Cream Store Effect: This effect, where respondents show a preference for a larger number of options when they don't have to make a real decision, can lead to overestimation of the importance of certain features. It can result in prioritizing features that may not be as critical in practice.
+
+- Limited Exploration of Rationales: Surveys may not effectively capture the underlying reasons or rationales for certain requirements. Understanding the "why" behind a requirement is essential for successful implementation, and this can be challenging to extract from surveys.
+
+- Difficulties in Handling Ambiguity: When stakeholders have differing or ambiguous requirements, surveys may not be the best tool for resolving conflicts or ambiguities. They lack the real-time interaction and negotiation capabilities of techniques like interviews or workshops.
+
+- Lack of Feedback and Clarification: Surveys do not provide opportunities for immediate feedback or clarification of responses. If stakeholders have questions or need further explanation, surveys may not facilitate this effectively.
+
+- Pilot Study and Instrument Refinement: Conducting a pilot study to refine the survey instrument adds an additional step to the requirements elicitation process and may consume extra time and resources.
+
+7. Use Case
+
+- Complexity: Use cases can become complex, especially for large and intricate systems. As the system grows in complexity, managing and maintaining a comprehensive set of use cases can be challenging.
+
+- Ambiguity: Use cases may still contain ambiguities or uncertainties, particularly in the early stages of requirements engineering. Stakeholders and developers may have different interpretations of the same use case, leading to misunderstandings.
+
+- Incompleteness: Use cases may not always capture all possible scenarios and interactions, leading to incomplete or missing requirements. There's a risk that certain edge cases or exceptional scenarios are overlooked.
+
+- Difficulty in Handling Non-Functional Requirements: While use cases are primarily focused on functional requirements, non-functional requirements (e.g., performance, security) may not be explicitly addressed within use cases. These often require separate documentation or consideration.
+
+- Scope Limitations: Use cases are typically focused on the system's interactions with external actors and may not fully address internal system behavior or data manipulation.
+
+- Maintainability: As the project evolves, maintaining a large number of use cases can be time-consuming. Updates and changes in one use case may have ripple effects on others, requiring careful management.
+
+- Complexity for Simple Systems: Use cases may be too elaborate for very simple systems, making them appear more complicated than they actually are.
+
+- Lack of Visual Clarity: While use case diagrams provide a high-level view of interactions, they may not capture all the necessary details of a system's behavior. This can lead to difficulties in understanding the system's behavior fully.
+
+- Subjectivity: The quality and completeness of use cases depend on the perspective of the requirements analyst or stakeholders. Different individuals may have different views on what should be included in a use case.
+
+- Difficulty in Reuse: While the text mentions the potential for forming a pattern language and reusing design elements, in practice, reuse of use cases across projects can be challenging, especially when systems have unique requirements and contexts.
+
+- Overemphasis on Descriptions: In some cases, the focus on detailed use case descriptions may detract from the actual requirements engineering process, potentially leading to a lack of attention to other critical activities, such as validation and verification.
