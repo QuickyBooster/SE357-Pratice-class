@@ -1,0 +1,32 @@
+@startuml
+left to right direction
+
+actor Admin as C
+actor Staff as S
+rectangle "Website: Máy tính" {
+  usecase (CRUD thông tin hợp đồng) as UC1
+  usecase (Tạo gia hạn hợp đồng) as UC2
+  usecase (Ký hoàn trả cọc) as UC3
+}
+
+rectangle "App: Điện thoại" {
+  usecase "Xem thông tin hợp đồng" as UC4
+  usecase "Xem thông tin gia hạn hợp đồng" as UC5
+  usecase "Yêu cầu gia hạn hợp đồng" as UC6
+  usecase "Ký nhận việc hoàn trả cọc" as UC7
+  
+}
+
+C -- UC1
+C -- UC2
+C -- UC3
+UC4 -- S
+UC5 -- S
+UC6 -- S
+UC7 -- S
+UC1 -- UC4
+UC2 -- UC5
+UC2 -- UC6
+UC3 -- UC7
+
+@enduml
