@@ -3,7 +3,7 @@ left to right direction
 
 actor Admin as C
 actor Staff as S
-rectangle "Website: Máy tính" {
+rectangle "Website: Desktop" {
   usecase (CRUD thông tin người bên thuê) as UC1
   usecase (CRUD thông tin căn hộ) as UC2
   usecase (CRUD thông tin thông báo) as UC3

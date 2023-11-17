@@ -3,7 +3,7 @@ left to right direction
 
 actor Admin as C
 actor Staff as S
-rectangle "Website: Máy tính" {
+rectangle "Website: Desktop" {
   usecase (CRUD thông tin hợp đồng) as UC1
   usecase (Tạo gia hạn hợp đồng) as UC2
   usecase (Ký hoàn trả cọc) as UC3
