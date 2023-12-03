@@ -1,6 +1,21 @@
-# SE357-Pratice-class: SE357.O11.PMCL
-### Thành viên nhóm:
-* 21522133 - Võ Hữu
-* 20522003 - Dương Thanh Thủy
+![UIT](https://img.shields.io/badge/from-UIT%20VNUHCM-blue?style=for-the-badge&link=https%3A%2F%2Fwww.uit.edu.vn%2F)
 
-[bài tập](https://github.com/vutuanhai237/CourseMaterials/blob/master/SE357-Requirement%20engineering/Exercises/1.%20RE%20tool.md)
+Quản lý tòa nhà
+
+**Contributors**:
+- Leader: Võ Hữu - 21522133 - [Github](https://github.com/QuickyBooster)
+- Member: Dương Thanh Thủy - 20522003 - [Github](https://github.com/ThuyDuong0705)
+
+**Supervisors**:
+
+- Thầy. Vũ Tuấn Hải - [Github](https://github.com/vutuanhai237)
+
+**Description**: 
+
+**How to use**:
+
+**Additional information**:
+
+**Code of conducting**:
+
+**License**:
