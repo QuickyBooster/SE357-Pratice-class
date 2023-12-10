@@ -1,0 +1,26 @@
+@startuml
+|Admin|
+start
+repeat  :Thêm;
+repeat :Thêm;
+if (Thêm bằng xlxs?) then (true)
+    |Admin|
+    :Nhập bằng xlxs;
+    :Chọn file trong hệ thống;
+else (false)
+    |Admin|
+    :Nhập thông tin căn hộ;
+    |Hệ thống|
+endif
+repeat while (kiểm tra ràng buộc) is (không thỏa) not (thỏa)
+|Cơ sở dữ liệu|
+repeat while (kiểm tra tồn tại) is ( tồn tại) not (không tồn tại)
+:Lưu;
+|Hệ thống|
+:Thông báo thành công;
+|Hệ thống|
+:Thông báo không thỏa ràng buộc;
+|Admin|
+:Nhập thông tin căn hộ;
+
+@enduml
