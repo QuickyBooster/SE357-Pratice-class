@@ -1,0 +1,40 @@
+@startuml
+
+abstract class  AContract {
+  - aContractId: string
+  - representedByA: string
+  - phoneNumberA: string
+  - emailA: string
+  - citizenIdA: string
+  - representedByB: string
+  - phoneNumberb: string
+  - emailb: string
+  - citizenIdb: string
+  - contractName: string
+  - date: Datetime
+  - value: float
+  - valueByString: string
+  - currency: string
+  - effectiveDate: Datetime
+  - expirationDate: Datetime
+  - content: string
+  - eSignatureA: string
+  - eSignatureB: string
+  + sendContract(string email, string header, string content)
+  + exportToPDF(string pathToSave)
+  + exportToWord(string pathToSave)
+  + makeAsTemplate(string pathToSave)
+}
+
+class Contract {
+  - contractId: string
+  - aContractId: string
+  - detail: string
+  + sendContract(string email, string header, string content)
+  + exportToPDF(string pathToSave)
+  + exportToWord(string pathToSave)
+  + makeAsTemplate(string pathToSave)
+}
+class Contract extends AContract
+
+@enduml
