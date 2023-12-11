@@ -8,11 +8,19 @@ Quản lý tòa nhà
 
 **Supervisors**:
 
-- Thầy. Vũ Tuấn Hải - [Github](https://github.com/vutuanhai237)
+- Thầy Vũ Tuấn Hải - [Github](https://github.com/vutuanhai237)
 
 **Description**: 
+Mục đích của đề tài là xây dựng bộ tài liệu cho hệ thống hỗ trợ quản lý tòa nhà. Scope của bộ tài này trong phạm vi quản lý cư dân, quản lý tài sản, quản lý hợp đồng, quản lý thu chi, quản lý ra vào, quản lý dịch vụ.
 
 **How to use**:
+* Repository has 3 parts:
+
+  - Lab 1.1: Answer questions from chapter 8 of "Requirements Engineering for Software and Systems (Philip A. Laplante) - 2022 edition" book.
+
+  - Lab 1.2: Usecase diagram, Activity diagrams and Class diagram for project.
+
+  - Lab 1.3: Requirements Linkage Traceability Matrix, Requirements Source Traceability Matrix, Requirements Stakeholder Traceability Matrix for project.
 
 **Additional information**:
 
