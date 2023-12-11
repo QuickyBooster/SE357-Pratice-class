@@ -1,0 +1,42 @@
+@startuml
+|Staff|
+start
+:Tạo yêu cầu mua mới thiết bị;
+:Điền các danh mục, giá cả, nhà cung cấp;
+|Hệ thống|
+:Tạo hợp đồng theo mẫu;
+|Staff|
+:Chỉnh sửa (nếu có) và gửi yêu cầu;
+|Admin|
+if (xác nhận) then (Từ chối)
+    |Hệ thống|
+    :Thông báo nhân viên;
+    stop
+else (Duyệt)
+    |Hệ thống|
+    :Thông báo nhân viên;
+endif
+|Staff|
+:Soạn hợp đồng;
+:Liên hệ nhà cung cấp;
+fork
+    |Nhà cung cấp|
+    :Ký hợp đồng;
+fork again
+    |Admin|
+    :Ký hợp đồng;
+end fork
+|Kế toán|
+:Scan hợp đồng cho vào hệ thống;
+|Hệ thống|
+:Lưu thông tin;
+|Kế toán|
+:Thanh toán 50%;
+|Nhà cung cấp|
+:Bàn giao thiết bị;
+|Kế toán|
+:Thanh toán 50%;
+|Hệ thống|
+:Thông báo admin;
+stop
+@enduml

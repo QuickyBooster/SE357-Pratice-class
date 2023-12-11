@@ -1,0 +1,28 @@
+@startuml
+|Staff|
+|Khách hàng|
+start
+:Gửi yêu cầu bảo trì;
+|Staff|
+:Nhận yêu cầu bảo trì;
+:Xác nhận thông tin bảo trì;
+if (Đồng ý bảo trì?) then (không đồng ý)
+    :Ghi lý do;
+    |Hệ thống|
+    :Thông báo khách hàng;
+    |Cơ sở dữ liệu|
+    :Lưu data;
+    stop
+else (Đồng ý)
+    |Staff|
+    :Chọn nhân sự bảo trì;
+    :Đặt công cụ bảo trì ở phòng quản lý thiết bị;
+    repeat :Đặt lịch ngày bảo trì;
+    |Hệ thống|
+    repeat while (Thiết bị, nhân sự) is (không sẵn sàng vào ngày bảo trì) not ( sẵn sàng vào ngày bảo trì)
+    :Thông báo khách hàng và nhân viên;
+    |Cơ sở dữ liệu|
+    :Lưu data;
+    stop
+endif
+@enduml
