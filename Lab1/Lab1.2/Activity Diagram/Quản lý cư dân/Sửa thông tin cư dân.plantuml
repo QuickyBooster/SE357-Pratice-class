@@ -1,0 +1,18 @@
+@startuml
+|Admin|
+start
+:Chọn cư dân cần sửa thông tin;
+|Hệ thống|
+:Hiển thị màn hình sửa thông tin cư dân;
+|Admin|
+repeat :Nhập thông tin cần sửa;
+|Admin|
+:Nhấn button "Cập nhật";
+|Hệ thống|
+repeat while (kiểm tra ràng buộc?) is (Không thỏa) not (thỏa)
+|Cơ sở dữ liệu|
+:Cập nhật dữ liệu;
+|Hệ thống|
+:Hiển thị thông báo thành công;
+stop
+@enduml

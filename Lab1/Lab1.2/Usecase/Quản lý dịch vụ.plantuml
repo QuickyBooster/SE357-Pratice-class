@@ -1,49 +1,43 @@
 @startuml
 left to right direction
 
-actor Admin as C
+actor Admin as A
 actor Staff as S
 rectangle "Website: Desktop" {
-  usecase (Xem Danh sách Yêu cầu Bảo trì) as UC1
-   (UC1)<..(Lọc theo trạng thái):<<extend>>
-  usecase (Xác nhận yêu cầu bảo trì) as UC2
-  usecase (Tạo Lịch Bảo trì Mới) as UC3
-    (UC3)<..(Đặt độ ưu tiên bảo trì):<<extend>>
-      usecase (Gửi thông báo lịch bảo trì) as UC12
-  usecase (CRUD người thực hiện bảo trì) as UC4
-usecase (Hoàn Thành Bảo trì) as UC5
-(UC5)<..(Thêm ghi chú sau bảo trì):<<extend>>
-    (UC5)..>(Xác nhận hoàn thành):<<include>>
-    usecase (Xem Lịch Sử Bảo trì) as UC6
+  usecase (Xem Danh sách Yêu cầu dịch vụ) as UC1
+   (UC1)<..(Lọc theo dịch vụ):<<extend>>
+  usecase (Xác nhận yêu cầu dịch vụ) as UC2
+  usecase (Xử lý yêu cầu dịch vụ) as UC3
+       (UC3)..>(Gửi thông báo dịch vụ):<<include>>
+      (UC3)..>(Phân công người xử lý):<<include>>
+  usecase (Xác nhận hoàn thành) as UC4
+usecase (Xem đánh giá) as UC5
+    usecase (Xem Lịch Sử dịch vụ) as UC6
 
 }
 
 rectangle "App: Điện thoại" {
-  usecase "CRUD yêu cầu đặt lịch bảo trì" as UC7
-  usecase "Nhận thông báo lịch bảo trì" as UC8
-  usecase "Xem Trạng Thái Bảo trì" as UC9
-  usecase "Xác nhận lịch bảo trì" as UC10
- usecase "Thông báo kết quả bảo trì" as UC11
+  usecase "Đăng kí dịch vụ" as UC7
+  usecase "Nhận thông báo xác nhận" as UC8
+  usecase "Xem trạng thái xử lý" as UC9
+  usecase "Đánh giá dịch vụ" as UC10
   
 }
 
-UC1 -- C
-UC2 -- C
-UC3 -- C
-UC4 -- C
-UC5 -- C
-UC6 -- C
-UC12 -- C
-S -- UC7
-S -- UC8
-S -- UC9 
+UC1 -- A
+UC2 -- A
+UC3 -- A
+UC4 -- A
+UC5 -- A
+UC6 -- A
+S -- UC7 
+S -- UC8 
+S -- UC9
 S -- UC10 
-S -- UC11
-UC1 -- UC7
-UC12 -- UC8
-UC9 -- UC3
-UC10 -- UC3
-UC11 -- UC5
+UC7 -- UC1
+UC8 -- UC3
+UC9 -- UC4
+UC10 -- UC5
 
 
 

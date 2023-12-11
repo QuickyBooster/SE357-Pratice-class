@@ -1,0 +1,60 @@
+@startuml
+
+|Cư dân|
+start
+:Chọn module "Dịch vụ";
+|App cư dân|
+: Hiển thị danh sách dịch vụ;
+|Cư dân|
+:Chọn button dịch vụ cần thiết;
+|App cư dân|
+:Hiển thị màn hình đăng kí dịch vụ;
+|Cư dân|
+:Nhập thông tin thời gian bắt đầu sử dụng dịch vụ;
+:Nhấn button "Đăng kí";
+|App cư dân|
+:Hiển thị thông báo "Đăng kí thành công";
+|Admin|
+:Chọn module "Yêu cầu dịch vụ";
+|Website Admin|
+:Hiển thị danh sách yêu cầu dịch vụ;
+|Admin|
+:Chọn yêu cầu dịch vụ cần xử lý;
+|Website Admin|
+:Hiển thị popup chi tiết yêu cầu dịch vụ;
+|Admin|
+if (Xác nhận?) then (yes)
+    |Admin|
+    :Nhấn button "Đồng ý";
+    |Website Admin|
+    :Hiển thị thông báo"Chấp nhận yêu cầu thành công";
+else (no)
+    |Admin|
+    :Nhấn button "Từ chối";
+    |Website Admin|
+    :Hiển thị danh sách yêu cầu dịch vụ;
+    stop
+endif
+
+|Website Admin|
+:Hiển thị "Chi tiết yêu cầu dịch vụ";
+|Admin|
+repeat:Chọn "người xử lý" và nhấn button "Phân công";
+|Admin|
+repeat while (Xác nhận?) is (no) not (yes);
+|Website Admin|
+:Hiển thị thông báo "Phân công thành công";
+|App cư dân|
+:Hiển thị thông báo trạng thái "Đã tiếp nhận" và nhân viên tiếp nhận;
+|Admin|
+:Nhấn đổi trạng thái "Hoàn thành";
+|App cư dân|
+:Thông báo cư dân Đánh giá dịch vụ;
+|Cư dân|
+:Đánh giá dịch vụ;
+|App cư dân|
+:Đổi trạng thái "Đã đánh giá";
+|Admin|
+:Nhấn xem đánh giá dịch vụ;
+stop
+@enduml

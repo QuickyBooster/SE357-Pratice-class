@@ -1,0 +1,84 @@
+@startuml
+
+class Admin {
+  +viewServiceRequests()
+  +confirmServiceRequest()
+  +processServiceRequest()
+  +assignStaff()
+  +completeServiceRequest()
+  +viewServiceReviews()
+}
+
+class Staff {
+  +registerForService()
+  +receiveConfirmationNotification()
+  +viewServiceStatus()
+  +rateService()
+}
+
+class WebsiteAdmin {
+  +displayServiceRequests()
+  +displayServiceDetails()
+  +confirmServiceRequest()
+  +assignStaff()
+  +displayAssignedStaff()
+  +completeServiceRequest()
+  +displayServiceReviews()
+}
+
+class AppUser {
+  +selectService()
+  +registerForService()
+  +receiveRegistrationConfirmation()
+  +provideServiceFeedback()
+  +viewServiceStatus()
+}
+
+class ServiceRequest {
+  -requestDetails: string
+  -status: string
+  +getRequestDetails(): string
+  +getStatus(): string
+  +setRequestDetails(details: string): void
+  +setStatus(status: string): void
+}
+
+class Service {
+  -serviceName: string
+  -serviceDetails: string
+  +getServiceName(): string
+  +getServiceDetails(): string
+  +setServiceName(name: string): void
+  +setServiceDetails(details: string): void
+}
+
+class ServiceAssignment {
+  -assignedStaff: string
+  -assignmentStatus: string
+  +getAssignedStaff(): string
+  +getAssignmentStatus(): string
+  +setAssignedStaff(staff: string): void
+  +setAssignmentStatus(status: string): void
+}
+
+class ServiceReview {
+  -rating: int
+  -feedback: string
+  +getRating(): int
+  +getFeedback(): string
+  +setRating(rating: int): void
+  +setFeedback(feedback: string): void
+}
+
+AppUser --|> ServiceRequest
+Admin --|> ServiceRequest
+Staff --|> ServiceRequest
+WebsiteAdmin --|> ServiceRequest
+WebsiteAdmin --|> ServiceAssignment
+Admin --|> ServiceAssignment
+Staff --|> ServiceAssignment
+WebsiteAdmin --|> Service
+Admin --|> Service
+ServiceReview --|> Service
+
+@enduml

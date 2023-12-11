@@ -4,7 +4,8 @@ left to right direction
 actor Admin as C
 actor Staff as S
 rectangle "Website: Desktop" {
-  usecase (CRUD thông tin người bên thuê) as UC1
+  usecase (CRUD thông tin người cư dân) as UC1
+  usecase (Duyệt cư dân) as UC10
   usecase (CRUD thông tin căn hộ) as UC2
   usecase (CRUD thông tin thông báo) as UC3
   usecase (Xem báo cáo và thống kê) as UC4
@@ -13,9 +14,9 @@ rectangle "Website: Desktop" {
 rectangle "App: Điện thoại" {
   usecase "Đăng nhập" as UC5
   usecase "RU thông tin người bên thuê" as UC6
+  usecase "Đăng ký" as UC11
   usecase "Xem thông tin căn hộ" as UC7
   usecase "Xem thông tin thông báo" as UC8
-  usecase "Xem thống kê về thanh toán" as UC9
   
 }
 
@@ -23,16 +24,16 @@ C -- UC1
 C -- UC2
 C -- UC3
 C -- UC4
+C -- UC10
 UC5 -- S
 UC6 -- S
 UC7 -- S
 UC8 -- S
-UC9 -- S
+UC11 -- S
 UC1 -- UC5
 UC1 -- UC6
 UC2 -- UC7
 UC3 -- UC8
-UC4 -- UC9
-
+UC10 -- UC11
 
 @enduml

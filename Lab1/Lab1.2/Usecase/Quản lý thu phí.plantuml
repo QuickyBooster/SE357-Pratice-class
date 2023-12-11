@@ -1,0 +1,37 @@
+@startuml
+left to right direction
+
+actor Admin as C
+actor Staff as S
+rectangle "Website: Desktop" {
+  usecase (Tạo thông báo phí) as UC1
+      (UC1)..>(Gửi thông tin thanh toán):<<include>>
+  usecase (Sửa thông báo phí) as UC2
+  usecase (Xem thông báo phí) as UC3
+    usecase (Xóa thông báo phí) as UC4
+  usecase (Cập nhật đóng phí thu) as UC5
+    usecase (Xem báo cáo và thống kê) as UC6
+  
+}
+rectangle "Cổng thanh toán" {
+  usecase (Thực hiện giao dịch thanh toán) as UC7
+}
+rectangle "App: Điện thoại" {
+  usecase "Xem thông báo thanh toán" as UC8
+  usecase "Thanh toán hóa đơn" as UC9
+}
+
+C -- UC1
+C -- UC2
+C -- UC3
+C -- UC4
+C -- UC5
+C -- UC6
+UC8 -- S
+UC9 -- S
+UC1 -- UC8
+UC5 -- UC7
+UC7 -- UC9
+
+
+@enduml

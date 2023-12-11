@@ -1,0 +1,60 @@
+@startuml
+
+|Admin|
+start
+:Chọn module "Quản lý thu phí";
+:Chọn "Thông báo phí";
+|Website Admin|
+:Hiển thị danh sách thông báo thu phí;
+|Admin|
+:Chọn button "Tạo thông báo phí";
+|Website Admin|
+repeat
+:Hiển thị popup "Tạo thông báo phí";
+|Admin|
+:Nhập thông tin thông báo phí và nhấn "Gửi thông báo";
+|Website Admin|
+repeat while (Gửi thành công?) is (no) not (yes);
+:Hiển thị thông báo "Gửi thông báo thu phí thành công";
+|App cư dân|
+:Hiển thị thông báo phí dịch vụ;
+|Cư dân|
+:Nhấn chọn thông báo phí dịch vụ;
+|App cư dân|
+:Hiển thị chi tiết thanh toán dịch vụ;
+if (Thanh toán trên app?) then (yes)
+    |Cư dân|
+    :Nhấn button "Thanh toán";
+    |App cư dân|
+    :Hệ thống hiển thị danh sách chọn phương thức thanh toán;
+    |Cư dân|
+    :Chọn phương thức thanh toán và nhấn button "Xác nhận";
+    |Cổng thanh toán|
+    :Thanh toán;
+    if (Xác nhận thanh toán?) then (yes)
+    |App cư dân|
+    :Hiển thị màn hình thanh toán thành công;
+    |Website Admin|
+    :Cập nhật "danh sách phí đã thu;
+    stop
+else (no)
+    |App cư dân|
+    :Hiển thị thông báo "Lỗi!!! Vui lòng thử lại";
+    stop
+endif
+else (no)
+    |Cư dân|
+    :Thanh toán tiền mặt hoặc chuyển khoản;
+    |Admin|
+    :Nhấn button "Cập nhật đóng phí thu";
+    |Website Admin|
+    :Hiển thị màn hình "Cập nhật phí đã thu";
+    |Admin|
+    :Nhập thông tin phí đã thu và nhấn "Tạo";
+    |Website Admin|
+    :Hiển thị popup "Tạo thanh toán thành công";
+    :In phiếu thu thanh toán;
+    stop
+endif
+
+@enduml
