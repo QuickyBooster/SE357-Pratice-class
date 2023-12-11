@@ -5,10 +5,11 @@ repeat  :Thêm;
 repeat :Thêm;
 if (Thêm bằng xlxs?) then (true)
     |Admin|
-    :Nhập bằng xlxs;
+    :Chọn button "Excel";
     :Chọn file trong hệ thống;
 else (false)
     |Admin|
+    :Chọn button "Thêm";
     :Nhập thông tin căn hộ;
     |Hệ thống|
 endif

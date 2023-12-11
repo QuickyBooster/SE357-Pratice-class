@@ -1,0 +1,85 @@
+@startuml
+
+class Admin {
+  +viewListOfServiceRequests()
+  +confirmServiceRequest()
+  +processServiceRequest()
+  +confirmCompletion()
+  +viewReviews()
+}
+
+class Staff {
+  +registerService()
+  +receiveConfirmationNotification()
+  +checkProcessingStatus()
+  +rateService()
+}
+
+class WebsiteAdmin {
+  +displayFeeNotifications()
+  +createFeeNotification()
+  +sendFeeNotification()
+  +updatePaidFeesList()
+}
+
+class AppUser {
+  +registerForService()
+  +receiveConfirmationNotification()
+  +checkProcessingStatus()
+  +rateService()
+  +viewFeeNotifications()
+  +selectFeeNotification()
+  +viewPaymentDetails()
+  +makePayment()
+}
+
+class PaymentGateway {
+  +processPayment()
+  +confirmPayment()
+}
+
+class CashPayment {
+  +makeCashPayment()
+}
+
+class BankTransferPayment {
+  +makeBankTransferPayment()
+}
+
+class PaymentConfirmation {
+  +confirmPayment()
+}
+
+class Fee {
+  -feeAmount: double
+  -serviceDescription: string
+  -paymentStatus: string
+  +getFeeAmount(): double
+  +getServiceDescription(): string
+  +getPaymentStatus(): string
+  +setFeeAmount(amount: double): void
+  +setServiceDescription(description: string): void
+  +setPaymentStatus(status: string): void
+}
+
+class ServiceRequest {
+  -requestDescription: string
+  -requestStatus: string
+  +getRequestDescription(): string
+  +getRequestStatus(): string
+  +setRequestDescription(description: string): void
+  +setRequestStatus(status: string): void
+}
+
+WebsiteAdmin --|> Admin
+Staff --|> Admin
+AppUser --|> Staff
+AppUser --|> WebsiteAdmin
+AppUser --|> PaymentGateway
+CashPayment --|> PaymentGateway
+BankTransferPayment --|> PaymentGateway
+PaymentConfirmation --|> PaymentGateway
+PaymentGateway -- Fee
+PaymentGateway -- ServiceRequest
+
+@enduml

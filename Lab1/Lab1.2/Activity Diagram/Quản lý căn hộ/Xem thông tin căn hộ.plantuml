@@ -1,7 +1,7 @@
 @startuml
 |Admin|
 start
-:Chọn button view căn hộ;
+:Chọn button "Căn hộ";
 |Hệ thống|
 :Hiển thị danh sách căn hộ;
 |Admin|

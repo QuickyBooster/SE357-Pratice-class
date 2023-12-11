@@ -1,0 +1,67 @@
+@startuml
+class ResidentManagement {
+  +CRUDResidentInfo()
+  +DuyetCuDan()
+  +CRUDApartmentInfo()
+  +CRUDAnnouncementInfo()
+  +ViewReportsAndStatistics()
+}
+
+class Resident {
+  -residentID: int
+  -name: String
+  -phoneNumber: String
+  -apartmentID: int
+  -password: String
+  +getResidentInfo()
+  +updateResidentInfo()
+}
+
+class Apartment {
+  -apartmentID: int
+  -apartmentNumber: String
+  -floor: int
+  -numberOfRooms: int
+  +getApartmentInfo()
+  +updateApartmentInfo()
+}
+
+class Announcement {
+  -announcementID: int
+  -title: String
+  -content: String
+  -date: Date
+  +getAnnouncementInfo()
+  +updateAnnouncementInfo()
+}
+
+class Report {
+  -reportID: int
+  -content: String
+  -date: Date
+  +generateReport()
+}
+
+class User {
+  -userID: int
+  -username: String
+  -password: String
+}
+
+class Admin {
+  +approveRegistration()
+}
+
+class Staff {
+  +verifyResidentInfo()
+  +verifyApartmentInfo()
+  +viewAnnouncement()
+}
+
+ResidentManagement -- Resident
+ResidentManagement -- Apartment
+ResidentManagement -- Announcement
+ResidentManagement -- Report
+User -- Admin
+User -- Staff
+@enduml

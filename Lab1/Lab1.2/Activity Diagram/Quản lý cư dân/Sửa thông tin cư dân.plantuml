@@ -1,11 +1,13 @@
 @startuml
 |Admin|
 start
-:Chộn bên thuê cần sửa thông tin;
+:Chọn cư dân cần sửa thông tin;
 |Hệ thống|
-:Hiển thị màn hình sửa thông tin bên thuê;
+:Hiển thị màn hình sửa thông tin cư dân;
 |Admin|
 repeat :Nhập thông tin cần sửa;
+|Admin|
+:Nhấn button "Cập nhật";
 |Hệ thống|
 repeat while (kiểm tra ràng buộc?) is (Không thỏa) not (thỏa)
 |Cơ sở dữ liệu|

@@ -4,34 +4,34 @@ left to right direction
 actor Admin as C
 actor Staff as S
 rectangle "Website: Desktop" {
-  usecase (Xem lịch sử thanh toán) as UC1
-  usecase (CRUD thông tin Nợ và Phí Trễ Thanh toán) as UC2
-  usecase (CRUD Chu kỳ Thanh toán) as UC3
-    (UC3)<..(Gửi thông tin thanh toán):<<extend>>
-  usecase (Xem báo cáo và thống kê) as UC4
-}
-
-rectangle "App: Điện thoại" {
-  usecase "Thanh toán hóa đơn" as UC5
-    (UC5)<..(Lưu thông tin thanh toán):<<extend>>
-  usecase "Xem Thông tin Nợ và Phí Trễ Thanh toán" as UC6
-  usecase "Nhận và xem thông tin thông báo thanh toán" as UC7
-  usecase "Xem thống kê về thanh toán" as UC8
+  usecase (Tạo thông báo phí) as UC1
+      (UC1)..>(Gửi thông tin thanh toán):<<include>>
+  usecase (Sửa thông báo phí) as UC2
+  usecase (Xem thông báo phí) as UC3
+    usecase (Xóa thông báo phí) as UC4
+  usecase (Cập nhật đóng phí thu) as UC5
+    usecase (Xem báo cáo và thống kê) as UC6
   
+}
+rectangle "Cổng thanh toán" {
+  usecase (Thực hiện giao dịch thanh toán) as UC7
+}
+rectangle "App: Điện thoại" {
+  usecase "Xem thông báo thanh toán" as UC8
+  usecase "Thanh toán hóa đơn" as UC9
 }
 
 C -- UC1
 C -- UC2
 C -- UC3
 C -- UC4
-UC5 -- S
-UC6 -- S
-UC7 -- S
+C -- UC5
+C -- UC6
 UC8 -- S
-UC1 -- UC5
-UC2 -- UC6
-UC3 -- UC7
-UC4 -- UC8
+UC9 -- S
+UC1 -- UC8
+UC5 -- UC7
+UC7 -- UC9
 
 
 @enduml
