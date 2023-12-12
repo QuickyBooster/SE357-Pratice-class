@@ -1,0 +1,12 @@
+@startuml
+|Admin|
+start
+:Chọn button "Thêm";
+repeat:Nhập thông tin cần thêm và nhấn "Gửi thông báo";
+|Website admin|
+repeat while (kiểm tra ràng buộc) is (không thỏa) not (thỏa)
+:Lưu;
+|Website admin|
+:Hiển thị thông báo "Gửi thông báo thành công";
+Stop
+@enduml

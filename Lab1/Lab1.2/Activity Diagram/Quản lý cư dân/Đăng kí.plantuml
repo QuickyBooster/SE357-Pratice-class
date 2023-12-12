@@ -1,0 +1,12 @@
+@startuml
+|Cư dân|
+start
+repeat:Nhấn chọn "đăng kí";
+      :Nhập thông tin đăng kí và nhấn button "Đăng kí";
+|App cư dân|
+repeat while (kiểm tra ràng buộc) is (không thỏa) not (thỏa)
+:Lưu;
+|App cư dân|
+:Hiển thị thông báo "Chờ ban quản lý duyệt tài khoản";
+Stop
+@enduml

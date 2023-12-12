@@ -1,10 +1,17 @@
 @startuml
 class ResidentManagement {
+  -userID: int
+  -username: String
+  -password: String
   +CRUDResidentInfo()
   +DuyetCuDan()
   +CRUDApartmentInfo()
   +CRUDAnnouncementInfo()
   +ViewReportsAndStatistics()
+  +approveRegistration()
+  +verifyResidentInfo()
+  +verifyApartmentInfo()
+  +viewAnnouncement()
 }
 
 class Resident {
@@ -42,26 +49,10 @@ class Report {
   +generateReport()
 }
 
-class User {
-  -userID: int
-  -username: String
-  -password: String
-}
-
-class Admin {
-  +approveRegistration()
-}
-
-class Staff {
-  +verifyResidentInfo()
-  +verifyApartmentInfo()
-  +viewAnnouncement()
-}
 
 ResidentManagement -- Resident
 ResidentManagement -- Apartment
 ResidentManagement -- Announcement
 ResidentManagement -- Report
-User -- Admin
-User -- Staff
+
 @enduml

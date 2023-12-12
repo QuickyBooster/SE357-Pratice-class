@@ -1,0 +1,18 @@
+@startuml
+|Admin|
+start
+:Chọn "thông báo" cần sửa;
+|Hệ thống|
+:Hiển thị màn hình sửa;
+|Admin|
+repeat :Nhập thông tin cần sửa;
+:Xác nhận thông tin sửa;
+:Nhấn "Cập nhật";
+|Hệ thống|
+repeat while (Kiểm tra ràng buộc?) is (không thỏa) not (thỏa)
+|Cơ sở dữ liệu|
+:Cập nhật data;
+|Hệ thống|
+:Hiện thông báo thành công;
+stop
+@enduml

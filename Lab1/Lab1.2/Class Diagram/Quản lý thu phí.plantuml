@@ -8,7 +8,7 @@ class Admin {
   +viewReviews()
 }
 
-class Staff {
+class Inhabitant {
   +registerService()
   +receiveConfirmationNotification()
   +checkProcessingStatus()
@@ -46,9 +46,6 @@ class BankTransferPayment {
   +makeBankTransferPayment()
 }
 
-class PaymentConfirmation {
-  +confirmPayment()
-}
 
 class Fee {
   -feeAmount: double
@@ -72,13 +69,12 @@ class ServiceRequest {
 }
 
 WebsiteAdmin --|> Admin
-Staff --|> Admin
-AppUser --|> Staff
+Inhabitant --|> Admin
+AppUser --|> Inhabitant
 AppUser --|> WebsiteAdmin
 AppUser --|> PaymentGateway
 CashPayment --|> PaymentGateway
 BankTransferPayment --|> PaymentGateway
-PaymentConfirmation --|> PaymentGateway
 PaymentGateway -- Fee
 PaymentGateway -- ServiceRequest
 

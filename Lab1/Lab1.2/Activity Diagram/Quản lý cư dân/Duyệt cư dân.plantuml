@@ -1,0 +1,17 @@
+@startuml
+
+|Admin|
+start
+:Chọn module "cư dân";
+|Website admin|
+:Hiển thị danh sách cư dân;
+|Admin|
+if (Xác nhận?) then (yes)
+    :Nhấn xác nhận "Duyệt" tài khoản cư dân cần duyệt;
+else (no)
+    :Nhấn "Từ chối" tài khoản cư dân cần duyệt;
+endif
+|Website admin|
+:Tự động gửi SMS thông báo đến sđt cư dân đã đăng kí;
+stop
+@enduml

@@ -1,0 +1,20 @@
+@startuml
+
+|Admin|
+start
+:Chọn module "Quản lý thu phí";
+:Chọn "Thông báo phí";
+|Website Admin|
+:Hiển thị danh sách thông báo thu phí;
+|Admin|
+:Chọn button "Tạo thông báo phí";
+|Website Admin|
+repeat
+:Hiển thị popup "Tạo thông báo phí";
+|Admin|
+:Nhập thông tin thông báo phí và nhấn "Gửi thông báo";
+|Website Admin|
+repeat while (Gửi thành công?) is (no) not (yes);
+:Hiển thị thông báo "Gửi thông báo thu phí thành công";
+stop
+@enduml

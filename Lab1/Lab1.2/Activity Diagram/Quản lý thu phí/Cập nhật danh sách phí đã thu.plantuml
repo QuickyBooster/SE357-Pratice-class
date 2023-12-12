@@ -1,0 +1,18 @@
+@startuml
+
+|Cư dân|
+start
+    :Thanh toán tiền mặt hoặc chuyển khoản;
+    |Admin|
+    :Nhấn button "Cập nhật đóng phí thu";
+    |Website Admin|
+    :Hiển thị màn hình "Cập nhật phí đã thu";
+    |Admin|
+    :Nhập thông tin phí đã thu và nhấn "Tạo";
+    |Website Admin|
+    :Hiển thị popup "Tạo thanh toán thành công";
+    :In phiếu thu thanh toán;
+stop
+
+
+@enduml

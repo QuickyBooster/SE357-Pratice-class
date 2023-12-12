@@ -1,0 +1,25 @@
+@startuml
+
+|Cư dân|
+start
+:Nhấn chọn thông báo phí dịch vụ;
+|App cư dân|
+:Hiển thị chi tiết thanh toán dịch vụ;
+    |Cư dân|
+    :Nhấn button "Thanh toán";
+    |App cư dân|
+    :Hệ thống hiển thị danh sách chọn phương thức thanh toán;
+    |Cư dân|
+    :Chọn phương thức thanh toán và nhấn button "Xác nhận";
+    |Cổng thanh toán|
+    repeat:Thanh toán;
+    repeat while (Xác nhận thanh toán?) is (no) not (yes);
+    |App cư dân|
+    :Hiển thị màn hình thanh toán thành công;
+    :In hóa đơn thanh toán;
+    |Website Admin|
+    :Cập nhật "danh sách phí đã thu;
+stop
+
+
+@enduml

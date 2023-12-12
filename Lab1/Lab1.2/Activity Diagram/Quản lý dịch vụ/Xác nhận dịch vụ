@@ -1,0 +1,28 @@
+@startuml
+
+|Admin|
+start
+:Chọn module "Yêu cầu dịch vụ";
+|Website Admin|
+:Hiển thị danh sách yêu cầu dịch vụ;
+|Admin|
+:Chọn yêu cầu dịch vụ cần xử lý;
+|Website Admin|
+:Hiển thị popup chi tiết yêu cầu dịch vụ;
+|Admin|
+if (Xác nhận?) then (yes)
+    |Admin|
+    :Nhấn button "Đồng ý";
+    |Website Admin|
+    :Hiển thị thông báo"Chấp nhận yêu cầu thành công";
+  |Website Admin|
+  :Hiển thị "Chi tiết yêu cầu dịch vụ";
+  stop
+else (no)
+    |Admin|
+    :Nhấn button "Từ chối";
+    |Website Admin|
+    :Hiển thị danh sách yêu cầu dịch vụ;
+    stop
+endif
+@enduml
