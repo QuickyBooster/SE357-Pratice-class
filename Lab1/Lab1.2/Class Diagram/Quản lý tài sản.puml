@@ -1,0 +1,33 @@
+@startuml
+class GroupEntity{
+    - groupEntityId: string
+    - name: string
+    - productId: string
+    - note: string
+    - dateBought: Datetime
+    - contractId: string
+    - warrantyExpirationDate: Datetime
+    - quantity: int
+    - active: bool
+    + removeQuantity(int minus)
+    + setActive(bool status)
+}
+
+class Entity{
+    - entityId: string
+    - groupEntityId: string
+    - note: string
+    - installationDate: Datetime
+    - position: string
+    - active: bool
+    - lastCheckDate: Datetime
+    - lastMachanicCheck: string
+    + updateLastCheckDate(Datetime timestamp)
+    + changeActive(bool status)
+    + changePosition(string position)
+}
+
+GroupEntity "1"--"*" Entity
+Contract "1"--"*" GroupEntity
+
+@enduml

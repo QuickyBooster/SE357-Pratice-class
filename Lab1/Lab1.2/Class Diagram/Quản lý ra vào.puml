@@ -1,0 +1,39 @@
+@startuml
+class CheckPoint{
+    - checkPointId: string
+    - location: string
+    - installationDate: Datetime
+    - active: bool
+    - upTime: float
+    - entityId: string
+    + entry(string userId)
+    + openOnce()
+    + open(string: pathId)
+    + close()
+}
+class Guest{
+    - guestId: string
+    - name: string
+    - purpose: string
+    - date: Datetime
+    - expirationDate: Datetime
+    - allower: userId
+    - urlIdPicture: string
+    - pathId: string
+    + prolonged(float timeBySec)
+    + revokeAccess()
+}
+class Path{
+    - pathId: string
+    + addPath(MinorPath path)
+    + removePath(MinorPath path)
+}
+class MinorPath{
+    - pathId: string
+    - checkpointId: string
+}
+Path "1"--"1*" MinorPath
+CheckPoint "1"--"1*" MinorPath
+Guest "*"--"1" Path
+
+@enduml

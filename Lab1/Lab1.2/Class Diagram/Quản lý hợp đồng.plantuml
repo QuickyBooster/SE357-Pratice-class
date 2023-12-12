@@ -36,5 +36,6 @@ class Contract {
   + makeAsTemplate(string pathToSave)
 }
 class Contract extends AContract
+User "*"--"0*"Contract
 
 @enduml
