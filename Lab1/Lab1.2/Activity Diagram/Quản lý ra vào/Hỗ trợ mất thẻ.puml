@@ -1,0 +1,25 @@
+@startuml
+|User|
+start
+:Thông báo mất thẻ;
+|Staff|
+:Hướng dẫn điền form thông tin;
+|User|
+repeat :Điền form;
+:Nộp form;
+|User|
+|Hệ thống|
+if (Kiểm tra thông tin) then (Không hợp lệ)
+    :Thông báo bảo vệ;
+    :Thông báo khách hàng điền sai thông tin;
+else (Hợp lệ)
+    :Hủy Id thẻ cũ;
+    :Tạo thẻ mới;
+endif
+repeat while (Kiểm tra thông tin) is (Không hợp lệ) not (Hợp lệ)
+:Thông báo bảo vệ;
+:Thông báo khách hàng;
+|Staff|
+:Đưa thẻ cho khách hàng;
+stop
+@enduml

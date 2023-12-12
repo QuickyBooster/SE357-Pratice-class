@@ -1,0 +1,25 @@
+@startuml
+|User2|
+|User1|
+:Yêu cầu thêm thẻ ra vào cho User1;
+|Staff|
+:Yêu cầu đưa ra thông tin thẩm quyền;
+|User2|
+:Cung cấp thông tin;
+|Staff|
+if(Kiểm tra thông tin của người bảo hộ) then (Không hợp lệ)
+:Từ chối tiếp nhận;
+stop
+else (Hợp lệ)
+:Yêu cầu cung cấp thông tin user1;
+|User1|
+:Cung cấp thông tin;
+|Staff|
+:Nạp thông tin vào thẻ mới;
+|Hệ thống|
+:Nạp thông tin;
+endif
+|Staff|
+:Gửi thẻ cho khách hàng;
+stop
+@enduml

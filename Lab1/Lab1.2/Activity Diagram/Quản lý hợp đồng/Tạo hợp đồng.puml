@@ -1,0 +1,13 @@
+@startuml
+|Admin|
+start
+:Tạo hợp đồng;
+:Chọn bản mẫu;
+repeat :Điền các thông tin cần\n thay đổi/thông tin mới;
+:Nhấn "Tạo";
+|Hệ thống|
+repeat while (Kiểm tra các ràng buộc) is (Không hợp lệ) not (Hợp lệ)
+:Tạo bản word theo yêu cầu;
+:Lưu data;
+stop
+@enduml
