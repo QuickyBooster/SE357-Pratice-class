@@ -2,7 +2,7 @@
 left to right direction
 
 actor Admin as C
-actor Staff as S
+actor User as U
 rectangle "Quản lý ra vào" {
   usecase (CRUD thẻ hoặc mã xác nhận) as UC2
   (UC2)..>(Lấy thông tin dân cư):<<extend>>
@@ -21,10 +21,11 @@ C--UC3
 C--UC4
 C--UC5
 C--UC6
-UC7--S
-UC8--S
-UC10--S
-UC5 -- UC10
+UC8 ..> UC4:<<extend>>
+UC5 <.. UC10:<<include>>
+UC7--U
+UC8--U
+UC10--U
 
 
 

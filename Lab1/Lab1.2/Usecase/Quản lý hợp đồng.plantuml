@@ -12,6 +12,8 @@ rectangle "Quản lý hợp đồng" {
 }
 
 U--UC1
+U -- UC8
+U --UC3
 UC2 -- C
 UC4 ..>UC2:<<extend>>
 UC1 ..>UC2:<<include>>
