@@ -1,0 +1,15 @@
+@startuml
+
+|Admin|
+start
+:Nhấn đổi trạng thái "Hoàn thành";
+|App cư dân|
+:Thông báo cư dân Đánh giá dịch vụ;
+|Cư dân|
+:Đánh giá dịch vụ;
+|App cư dân|
+:Đổi trạng thái "Đã đánh giá";
+|Admin|
+:Nhấn xem đánh giá dịch vụ;
+stop
+@enduml
