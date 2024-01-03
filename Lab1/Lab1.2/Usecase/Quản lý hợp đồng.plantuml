@@ -7,17 +7,15 @@ rectangle "Quản lý hợp đồng" {
   usecase (Tạo hợp đồng) as UC2
   usecase (Xem hợp đồng) as UC1
   usecase (Yêu cầu gia hạn hợp đồng) as UC8
-  usecase (Yêu cầu hoàn trả cọc) as UC3
+
   usecase (Tạo template hợp đồng) as UC4
 }
 
 U--UC1
 U -- UC8
-U --UC3
 UC2 -- C
 UC4 ..>UC2:<<extend>>
 UC1 ..>UC2:<<include>>
 UC8 ..>UC2:<<include>>
-UC3 ..>UC2:<<include>>
 
 @enduml
