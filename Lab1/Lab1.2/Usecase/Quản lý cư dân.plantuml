@@ -1,17 +1,14 @@
 @startuml
 left to right direction
 
-actor Admin as C
-actor Staff as S
-rectangle "Website: Desktop" {
+actor Nhanvien as C
+actor Cưdan as S
+rectangle "Quản lý cư dân" {
   usecase (CRUD thông tin người cư dân) as UC1
   usecase (Duyệt cư dân) as UC10
   usecase (CRUD thông tin căn hộ) as UC2
   usecase (CRUD thông tin thông báo) as UC3
   usecase (Xem báo cáo và thống kê) as UC4
-}
-
-rectangle "App: Điện thoại" {
   usecase "Đăng nhập" as UC5
   usecase "RU thông tin người bên thuê" as UC6
   usecase "Đăng ký" as UC11
@@ -30,10 +27,10 @@ UC6 -- S
 UC7 -- S
 UC8 -- S
 UC11 -- S
-UC1 -- UC5
-UC1 -- UC6
-UC2 -- UC7
-UC3 -- UC8
-UC10 -- UC11
+UC1 <.. UC5 :<<extend>>
+UC1 <.. UC6: <<extend>>
+UC2 <.. UC7 :<<extend>>
+UC3 <.. UC8: <<extend>>
+UC10 ..> UC11: <<extend>>
 
 @enduml

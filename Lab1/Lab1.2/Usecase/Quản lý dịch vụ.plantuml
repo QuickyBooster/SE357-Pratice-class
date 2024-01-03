@@ -1,22 +1,17 @@
 @startuml
 left to right direction
 
-actor Admin as A
-actor Staff as S
-rectangle "Website: Desktop" {
+actor NhanVien as A
+actor Cudan as S
+rectangle "Quản lý dịch vụ" {
   usecase (Xem Danh sách Yêu cầu dịch vụ) as UC1
    (UC1)<..(Lọc theo dịch vụ):<<extend>>
   usecase (Xác nhận yêu cầu dịch vụ) as UC2
   usecase (Xử lý yêu cầu dịch vụ) as UC3
-       (UC3)..>(Gửi thông báo dịch vụ):<<include>>
       (UC3)..>(Phân công người xử lý):<<include>>
   usecase (Xác nhận hoàn thành) as UC4
 usecase (Xem đánh giá) as UC5
     usecase (Xem Lịch Sử dịch vụ) as UC6
-
-}
-
-rectangle "App: Điện thoại" {
   usecase "Đăng kí dịch vụ" as UC7
   usecase "Nhận thông báo xác nhận" as UC8
   usecase "Xem trạng thái xử lý" as UC9
@@ -34,10 +29,10 @@ S -- UC7
 S -- UC8 
 S -- UC9
 S -- UC10 
-UC7 -- UC1
-UC8 -- UC3
-UC9 -- UC4
-UC10 -- UC5
+UC7 ..> UC1:<<extend>>
+UC8 <.. UC3: <<extend>>
+UC9 ..> UC4 :<<extend>>
+UC10 <.. UC5 :<<extend>>
 
 
 
