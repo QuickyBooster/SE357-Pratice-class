@@ -2,7 +2,7 @@
 left to right direction
 
 actor Admin as C
-rectangle "Website: Desktop" {
+rectangle "Quản lý tài sản" {
   usecase (CRUD thông tin tài sản) as UC1
   usecase (Theo dõi bảo trì và sửa chữa) as UC3
   usecase (CRUD lịch kiểm kê tài sản) as UC4
