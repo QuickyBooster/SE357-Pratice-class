@@ -9,7 +9,7 @@ rectangle "Quản lý ra vào" {
   usecase (Xem lịch sử ra vào và ra khỏi) as UC3
   usecase (Quản lý và kiểm soát các điểm ra vào) as UC4
   usecase (Xử lý trường hợp mất mất thẻ) as UC5
-  usecase (Báo cáo và thống kê về tình trạng ra vào) as UC6
+  
 
   usecase "Yêu cầu tạo thẻ ra vào cho khách" as UC7
   usecase "Ra vào tòa nhà" as UC8
@@ -20,7 +20,6 @@ C--UC2
 C--UC3
 C--UC4
 C--UC5
-C--UC6
 UC8 ..> UC4:<<extend>>
 UC5 <.. UC10:<<include>>
 UC7--U

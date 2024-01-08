@@ -1,8 +1,8 @@
 @startuml
 left to right direction
 
-actor Admin as C
-actor User as U
+actor "Quản lý" as C
+actor "Cư dân" as U
 rectangle "Quản lý hợp đồng" {
   usecase (Tạo hợp đồng) as UC2
   usecase (Xem hợp đồng) as UC1

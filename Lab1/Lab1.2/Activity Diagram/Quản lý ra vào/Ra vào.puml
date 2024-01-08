@@ -1,14 +1,14 @@
 @startuml
-|User|
+|Cư dân|
 start
-:Quẹt thẻ ra vào;
+:1. Quẹt thẻ ra vào;
 |Hệ thống|
 if(kiểm tra quyền?) then (không có quyền)
-:Thông báo không thể ra vào;
+:2. Thông báo không thể ra vào;
 stop
 else (có quyền)
-:Mở cửa;
+:3. Mở cửa;
+:4. Ghi log;
+stop
 endif
-|Log|
-:Ghi log;
 @enduml

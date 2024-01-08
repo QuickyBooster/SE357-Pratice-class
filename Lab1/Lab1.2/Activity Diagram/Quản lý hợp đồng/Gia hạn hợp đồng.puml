@@ -1,28 +1,28 @@
 @startuml
-|Admin|
-:Chọn hợp đồng;
-:Tạo yêu cầu gia hạn hợp đồng;
-:Chọn thời hạn;
+|Quản lý|
+:1. Chọn hợp đồng;
+:2. Tạo yêu cầu gia hạn hợp đồng;
+:3. Chọn thời hạn;
 |Hệ thống|
-:Gửi hợp đồng cho đối tác;
-|Partner|
-:Nhận thông tin;
+:4. Gửi hợp đồng cho đối tác;
+|Cư dân|
+:. Nhận thông tin;
 if (Kiểm tra thông tin) then (Không chấp nhận)
 |Hệ thống|
-:Gửi thông báo yêu cầu đã bị từ chối cho Admin;
+:6. Gửi thông báo yêu cầu đã bị từ chối cho Quản lý;
 stop
 else (Chấp nhận)
 endif
-:Gửi thông báo chấp nhận cho Admin;
+:7. Gửi thông báo chấp nhận cho Quản lý;
 fork
-|Admin|
-:Ký eSignature;
+|Quản lý|
+:8. Ký eSignature;
 fork again
-|Partner|
-:Ký eSignature;
+|Cư dân|
+:9. Ký eSignature;
 end fork
 |Hệ thống|
-:Lưu data;
-:Thông báo 2 bên gia hạn hợp đồng thành công;
+:10. Lưu data;
+:11. Thông báo 2 bên gia hạn hợp đồng thành công qua email;
 stop
 @enduml

@@ -1,58 +1,34 @@
 @startuml
-class ResidentManagement {
-  -userID: int
-  -username: String
-  -password: String
-  +CRUDResidentInfo()
-  +DuyetCuDan()
-  +CRUDApartmentInfo()
-  +CRUDAnnouncementInfo()
-  +ViewReportsAndStatistics()
-  +approveRegistration()
-  +verifyResidentInfo()
-  +verifyApartmentInfo()
-  +viewAnnouncement()
-}
 
-class Resident {
-  -residentID: int
-  -name: String
-  -phoneNumber: String
-  -apartmentID: int
-  -password: String
-  +getResidentInfo()
-  +updateResidentInfo()
+
+class "Resident" {
+  -residentID: string
+  -name: string
+  -phoneNumber: string
+  -password: string
+  +changePassword(string newPass)
 }
 
 class Apartment {
-  -apartmentID: int
-  -apartmentNumber: String
+  -apartmentID: string
+  -apartmentNumber: string
   -floor: int
   -numberOfRooms: int
-  +getApartmentInfo()
-  +updateApartmentInfo()
+  -masterResidentID: string
+  -memberList: List<Member>
+  +addMember(Member member)
+  +changeMaster(string residentID)
 }
 
 class Announcement {
-  -announcementID: int
-  -title: String
-  -content: String
+  -announcementID: string
+  -title: string
+  -content: string
   -date: Date
-  +getAnnouncementInfo()
-  +updateAnnouncementInfo()
-}
-
-class Report {
-  -reportID: int
-  -content: String
-  -date: Date
-  +generateReport()
+  -fileAttachedURL: List<String>
 }
 
 
-ResidentManagement -- Resident
-ResidentManagement -- Apartment
-ResidentManagement -- Announcement
-ResidentManagement -- Report
+Resident "*"--"*" Apartment
 
 @enduml

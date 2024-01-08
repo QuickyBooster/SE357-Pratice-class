@@ -1,28 +1,28 @@
 @startuml
-|Staff|
-|Khách hàng|
+|Nhân viên|
+|Cư dân|
 start
-:Gửi yêu cầu bảo trì;
-|Staff|
-:Nhận yêu cầu bảo trì;
-:Xác nhận thông tin bảo trì;
+:1. Gửi yêu cầu bảo trì;
+|Nhân viên|
+:2. Nhận yêu cầu bảo trì;
+:3. Xác nhận thông tin bảo trì;
 if (Đồng ý bảo trì?) then (không đồng ý)
-    :Ghi lý do;
+    :4. Ghi lý do;
     |Hệ thống|
-    :Thông báo khách hàng;
+    :5. Thông báo Cư dân;
     |Cơ sở dữ liệu|
-    :Lưu data;
+    :6. Lưu data;
     stop
 else (Đồng ý)
-    |Staff|
-    :Chọn nhân sự bảo trì;
-    :Đặt công cụ bảo trì ở phòng quản lý thiết bị;
-    repeat :Đặt lịch ngày bảo trì;
+    |Nhân viên|
+    :7. Chọn nhân sự bảo trì;
+    :8. Đặt công cụ bảo trì ở phòng quản lý thiết bị;
+    repeat :9. Đặt lịch ngày bảo trì;
     |Hệ thống|
     repeat while (Thiết bị, nhân sự) is (không sẵn sàng vào ngày bảo trì) not ( sẵn sàng vào ngày bảo trì)
-    :Thông báo khách hàng và nhân viên;
+    :10. Thông báo Cư dân và nhân viên;
     |Cơ sở dữ liệu|
-    :Lưu data;
+    :11. Lưu data;
     stop
 endif
 @enduml

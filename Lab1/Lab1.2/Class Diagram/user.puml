@@ -1,0 +1,21 @@
+class User{
+	-ID: string
+  -name: string
+  -phoneNumber: string
+  -password: string
+  +changePassword(string newPass)
+}
+class Admin {
+}
+class Resident{
+}
+class Staff{
+}
+class Member{
+  -CCCD: string
+  -name: string
+}
+
+Admin --|> User
+Resident --|> User
+Staff --|> User
