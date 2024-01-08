@@ -1,81 +1,14 @@
-@startuml
-
-class "Quản lý" {
-  +viewListOfServiceRequests()
-  +confirmServiceRequest()
-  +processServiceRequest()
-  +confirmCompletion()
-  +viewReviews()
+class Receipt{
+  - receiptID: string
+  - creator: string
+  - customers: List<string>
+  - reason: string
+  - title: string
+  - fee: float
 }
-
-class Inhabitant {
-  +registerService()
-  +receiveConfirmationNotification()
-  +checkProcessingStatus()
-  +rateService()
+class Pay{
+  - receiptID: string
+  - datePay: Datetime
+  - method: string
+  - receipt: string
 }
-
-class WebsiteAdmin {
-  +displayFeeNotifications()
-  +createFeeNotification()
-  +sendFeeNotification()
-  +updatePaidFeesList()
-}
-
-class AppUser {
-  +registerForService()
-  +receiveConfirmationNotification()
-  +checkProcessingStatus()
-  +rateService()
-  +viewFeeNotifications()
-  +selectFeeNotification()
-  +viewPaymentDetails()
-  +makePayment()
-}
-
-class PaymentGateway {
-  +processPayment()
-  +confirmPayment()
-}
-
-class CashPayment {
-  +makeCashPayment()
-}
-
-class BankTransferPayment {
-  +makeBankTransferPayment()
-}
-
-
-class Fee {
-  -feeAmount: double
-  -serviceDescription: string
-  -paymentStatus: string
-  +getFeeAmount(): double
-  +getServiceDescription(): string
-  +getPaymentStatus(): string
-  +setFeeAmount(amount: double): void
-  +setServiceDescription(description: string): void
-  +setPaymentStatus(status: string): void
-}
-
-class ServiceRequest {
-  -requestDescription: string
-  -requestStatus: string
-  +getRequestDescription(): string
-  +getRequestStatus(): string
-  +setRequestDescription(description: string): void
-  +setRequestStatus(status: string): void
-}
-
-WebsiteAdmin --|> "Quản lý"
-Inhabitant --|> "Quản lý"
-AppUser --|> Inhabitant
-AppUser --|> WebsiteAdmin
-AppUser --|> PaymentGateway
-CashPayment --|> PaymentGateway
-BankTransferPayment --|> PaymentGateway
-PaymentGateway -- Fee
-PaymentGateway -- ServiceRequest
-
-@enduml

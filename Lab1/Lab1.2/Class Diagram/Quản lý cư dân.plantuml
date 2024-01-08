@@ -11,13 +11,24 @@ class "Resident" {
 
 class Apartment {
   -apartmentID: string
+  -buildingID: string
   -apartmentNumber: string
   -floor: int
   -numberOfRooms: int
   -masterResidentID: string
+  -acreage: float
+  -note: string
   -memberList: List<Member>
   +addMember(Member member)
   +changeMaster(string residentID)
+}
+class Building{
+  -buildingID: string
+  -buildingName: string
+  -numberOfFloor: int
+  -note: string
+  -numberOfRoom: int
+  -masterId: string
 }
 
 class Announcement {
@@ -25,7 +36,8 @@ class Announcement {
   -title: string
   -content: string
   -date: Date
-  -fileAttachedURL: List<String>
+  -fileAttachedURL: List<string>
+  -receiver: List<string>
 }
 
 

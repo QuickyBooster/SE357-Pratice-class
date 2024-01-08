@@ -10,8 +10,9 @@ class Service{
   - approvedBy: string
   - customerID: string
   - appartmentID: string
+  - isAbort: bool
   - workerID: List<string>
-  + approve(List<string> workers,Datetime date, float fee)
+  + approve(List<string> workers,Datetime dateWork, float fee,string approvedBy)
   + deny(string reason)
 }
 enum ServiceType{
@@ -19,4 +20,10 @@ enum ServiceType{
   - CleanHouse
   - Laundry
   - Transport
+}
+class Rate{
+  - serviceID: string
+  - residentID: string
+  - star: byte
+  - comment: string
 }

@@ -1,39 +1,46 @@
 @startuml
 class CheckPoint{
-    - checkPointId: string
+    - checkPointID: string
     - location: string
     - installationDate: Datetime
     - active: bool
     - upTime: float
-    - entityId: string
+    - entityID: string
     + entry(string userId)
     + openOnce()
     + open(string: EntranceId)
     + close()
 }
 class Guest{
-    - guestId: string
+    - guestID: string
     - name: string
     - purpose: string
     - date: Datetime
     - expirationDate: Datetime
     - allower: userId
     - urlIdPicture: string
-    - entranceId: string
+    - entranceID: string
     + prolonged(float timeBySec)
     + revokeAccess()
 }
 class Entrance{
-    - entranceId: string
+    - entranceID: string
     + addEntrance(MinorEntrance Entrance)
     + removeEntrance(MinorEntrance Entrance)
 }
 class MinorEntrance{
-    - entranceId: string
-    - checkpointId: string
+    - minorEntranceID: string
+    - entranceID: string
+    - checkpointID: string
+}
+class UserEntrance{
+    - userEtranceID: string
+    - userID: string
+    - entranceID: string
 }
 Entrance "1"--"1*" MinorEntrance
 CheckPoint "1"--"1*" MinorEntrance
 Guest "*"--"1" Entrance
+UserEntrance "*"--"1" Entrance
 
 @enduml
