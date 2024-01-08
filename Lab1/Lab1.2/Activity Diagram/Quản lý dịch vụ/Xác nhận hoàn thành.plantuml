@@ -1,6 +1,6 @@
 @startuml
 
-|Admin|
+|Nhân viên|
 start
 :Nhấn đổi trạng thái "Hoàn thành";
 |App cư dân|
@@ -9,7 +9,7 @@ start
 :Đánh giá dịch vụ;
 |App cư dân|
 :Đổi trạng thái "Đã đánh giá";
-|Admin|
+|Nhân viên|
 :Nhấn xem đánh giá dịch vụ;
 stop
 @enduml

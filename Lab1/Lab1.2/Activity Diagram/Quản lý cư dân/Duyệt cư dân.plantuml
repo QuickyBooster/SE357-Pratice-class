@@ -6,7 +6,7 @@ start
 |Website admin|
 :Hiển thị danh sách cư dân;
 |Admin|
-if (Xác nhận?) then (yes)
+if (Nhấn icon "Duyệt"?) then (yes)
     :Nhấn xác nhận "Duyệt" tài khoản cư dân cần duyệt;
 else (no)
     :Nhấn "Từ chối" tài khoản cư dân cần duyệt;
