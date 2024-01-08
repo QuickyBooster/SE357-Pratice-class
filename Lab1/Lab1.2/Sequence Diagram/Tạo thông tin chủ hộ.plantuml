@@ -1,16 +1,16 @@
 @startuml
 
-participant NhanVien
+participant "Nhân viên"
 
 participant "Hệ thống" as System
 participant "Cơ dở dữ liệu" as CSDL
-participant "SMS" as CSDL
+participant "SMS"
 
 
-NhanVien -> System: 1. Nhấn button “Thêm thông tin cư dân”
+"Nhân viên" -> System: 1. Nhấn button “Thêm thông tin cư dân”
 activate System
 System -> System: 2. Hiển thị popup form “Thêm thông tin cư dân”
-NhanVien -> System: 3. Nhập thông tin "số điện thoại" vào trường dữ liệu
+"Nhân viên" -> System: 3. Nhập thông tin "số điện thoại" vào trường dữ liệu
 System -> CSDL: 4. Kiểm tra ràng buộc
 
 alt Tồn tại
@@ -18,7 +18,7 @@ activate CSDL
     CSDL -> CSDL: 4a1.Lấy tài khoản từ thông tin số điện thoại 
     CSDL --> System: 4a2. Fill các trường dữ liệu thông tin
     deactivate CSDL
-    NhanVien -> System: 4a3. Nhập "Số căn hộ"
+    "Nhân viên" -> System: 4a3. Nhập "Số căn hộ"
 
     System -> CSDL: 4a4. Kiểm tra ràng buộc
         activate CSDL
@@ -26,7 +26,7 @@ activate CSDL
     CSDL -> System: 5. Thông báo tạo thành công
         deactivate CSDL
 else Không tồn tại  
-    NhanVien -> System: 4b1. Nhập thông tin chủ căn hộ, số căn hộ
+    "Nhân viên" -> System: 4b1. Nhập thông tin chủ căn hộ, số căn hộ
      activate CSDL
     System -> CSDL: 4b2.Tự động thêm mật khẩu ngẩu nhiên vào trường mật khẩu của tài khoản. 
     System -> CSDL: 4b3.Kiểm tra ràng buộc 

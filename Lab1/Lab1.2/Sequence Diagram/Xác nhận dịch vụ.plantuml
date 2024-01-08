@@ -1,27 +1,27 @@
 @startuml
 
-participant NhanVien
+participant "Nhân viên"
 
 participant "Hệ thống" as System
 participant "Cơ dở dữ liệu" as CSDL
 
 
-NhanVien -> System: 1. Chọn module "Yêu cầu dịch vụ"
+"Nhân viên" -> System: 1. Chọn module "Yêu cầu dịch vụ"
 activate System
 System -> System: 2.Hiển thị danh sách yêu cầu dịch vụ
-NhanVien -> System: 3.Chọn yêu cầu dịch vụ cần xử lý
+"Nhân viên" -> System: 3.Chọn yêu cầu dịch vụ cần xử lý
 System -> System: 4.Hiển thị popup chi tiết yêu cầu dịch vụ
-NhanVien -> System: 5.Xác nhận yêu cầu dịch vụ
+"Nhân viên" -> System: 5.Xác nhận yêu cầu dịch vụ
 alt Xác nhận
 
-   NhanVien -> System: 5a1. Nhấn button "Đồng ý"
+   "Nhân viên" -> System: 5a1. Nhấn button "Đồng ý"
        activate CSDL
    System -> CSDL: 5a2. Gửi yêu cầu kiểm tra thông tin
 CSDL --> System: 5a3. Hiển thị thông báo"Chấp nhận yêu cầu thành công"
 
         deactivate CSDL
 else Không tồn tại  
-    NhanVien -> System: 5a2. Nhấn button "Từ chối"
+    "Nhân viên" -> System: 5a2. Nhấn button "Từ chối"
      activate CSDL
     System -> CSDL: 5b1. Gửi yêu cầu kiểm tra thông tin
     CSDL--> System: 5b2. Hiển thị danh sách yêu cầu dịch vụ 

@@ -1,20 +1,20 @@
 @startuml
 
-participant Quanly
-participant Nhanvien
+participant "Quản lý"
+participant "Nhân viên"
 participant "Hệ thống" as System
 
 
 activate System
-Quanly -> Nhanvien: 1. Công bố quyết định kiểm kê
-Quanly -> Nhanvien: 2. Thành lập hội đồng kiểm kê
-Nhanvien -> System: 3. Kiểm kê tài sản
-Nhanvien -> System: 4. Nhấn "tạo biên bản kiểm kê"
-System --> Nhanvien: 5.Tạo biên bản kiểm kê
-Nhanvien -> System: 6. Nhập thông tin trạng thái tài sản
-System --> Nhanvien: 7.Gửi biên bản kiểm kê
-System --> Quanly: 8.Gửi biên bản kiểm kê
-Quanly -> System: 9.Báo cáo kết quả
+"Quản lý" -> "Nhân viên": 1. Công bố quyết định kiểm kê
+"Quản lý" -> "Nhân viên": 2. Thành lập hội đồng kiểm kê
+"Nhân viên" -> System: 3. Kiểm kê tài sản
+"Nhân viên" -> System: 4. Nhấn "tạo biên bản kiểm kê"
+System --> "Nhân viên": 5.Tạo biên bản kiểm kê
+"Nhân viên" -> System: 6. Nhập thông tin trạng thái tài sản
+System --> "Nhân viên": 7.Gửi biên bản kiểm kê
+System --> "Quản lý": 8.Gửi biên bản kiểm kê
+"Quản lý" -> System: 9.Báo cáo kết quả
 
 deactivate System
 @enduml

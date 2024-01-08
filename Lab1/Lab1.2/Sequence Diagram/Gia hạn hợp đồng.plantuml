@@ -1,32 +1,32 @@
 @startuml
 
-participant Quanly
+participant "Quản lý"
 
 participant "Hệ thống" as System
-participant Cudan
+participant "Cư dân"
 
 
 activate System
-Quanly -> System: 1. Chọn hợp đồng
-Quanly -> System: 2. Tạo yêu cầu gia hạn hợp đồng
-Quanly -> System: 3.Chọn thời hạn
-activate Cudan
-System -> Cudan: 4. Gửi hợp đồng cho đối tác
-Cudan -> Cudan: 5. Kiểm tra thông tin
+"Quản lý" -> System: 1. Chọn hợp đồng
+"Quản lý" -> System: 2. Tạo yêu cầu gia hạn hợp đồng
+"Quản lý" -> System: 3.Chọn thời hạn
+activate "Cư dân"
+System -> "Cư dân": 4. Gửi hợp đồng cho đối tác
+"Cư dân" -> "Cư dân": 5. Kiểm tra thông tin
 
 alt Chấp nhận
-Cudan --> System: 5a1. Gửi thông báo chấp nhận cho quản lý
-System--> Quanly: 5a2. Ký eSignature
+"Cư dân" --> System: 5a1. Gửi thông báo chấp nhận cho quản lý
+System--> "Quản lý": 5a2. Ký eSignature
 
-System-> Cudan: 5a3. Ký eSignature
+System-> "Cư dân": 5a3. Ký eSignature
 
 else Không chấp nhận
-    Cudan --> System: 5b1.Gửi thông báo yêu cầu đã bị từ chối cho Quản lý
-    deactivate Cudan
+    "Cư dân" --> System: 5b1.Gửi thông báo yêu cầu đã bị từ chối cho Quản lý
+    deactivate "Cư dân"
 end
 System -> System: 6. Lưu data
-System -> Quanly: 7. Thông báo gia hạn thành công
+System -> "Quản lý": 7. Thông báo gia hạn thành công
 
-System -> Cudan: 8. Thông báo gia hạn thành công
+System -> "Cư dân": 8. Thông báo gia hạn thành công
 deactivate System
 @enduml

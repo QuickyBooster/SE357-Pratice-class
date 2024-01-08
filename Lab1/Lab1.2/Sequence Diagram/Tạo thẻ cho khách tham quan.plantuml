@@ -1,27 +1,27 @@
 @startuml
 
-participant Khach
-participant Cudan
-participant Nhanvien
+participant "Khách"
+participant "Cư dân"
+participant "Nhân viên"
 
 participant "Hệ thống" as System
 
 activate System
-Cudan -> Nhanvien: 1. Yêu cầu thêm thẻ ra vào cho khách
-Nhanvien -> System: 2. Yêu cầu đưa ra thông tin thẩm quyền
-System --> Khach: 3. Yêu cầu cung cấp thông tin
-Khach -> System: 4. Nhập thông tin khách
-Nhanvien --> Cudan: 5. Xác nhận thông tin
+"Cư dân" -> "Nhân viên": 1. Yêu cầu thêm thẻ ra vào cho khách
+"Nhân viên" -> System: 2. Yêu cầu đưa ra thông tin thẩm quyền
+System --> "Khách": 3. Yêu cầu cung cấp thông tin
+"Khách" -> System: 4. Nhập thông tin khách
+"Nhân viên" --> "Cư dân": 5. Xác nhận thông tin
 alt hợp lệ
-Nhanvien --> Cudan: 5a1. Yêu cầu cung cấp thông tin user1
-Cudan-->Nhanvien: 5a2. Cung cấp thông tin
-Nhanvien->System: 5a3. Nhập thông tin thẻ mới
+"Nhân viên" --> "Cư dân": 5a1. Yêu cầu cung cấp thông tin user1
+"Cư dân"-->"Nhân viên": 5a2. Cung cấp thông tin
+"Nhân viên"->System: 5a3. Nhập thông tin thẻ mới
 System-> System: 5a4. Lưu thông tin
-System--> Nhanvien: 5a5. Tạo thẻ cho khách
-Nhanvien--> Cudan: 5a6. Gửi thẻ cho khách
+System--> "Nhân viên": 5a5. Tạo thẻ cho khách
+"Nhân viên"--> "Cư dân": 5a6. Gửi thẻ cho khách
 else không hợp lệ
-Nhanvien-> System: 5b1. Từ chối tiếp nhận
-System--> Cudan: 5b2. Gửi thông báo từ chối tiếp nhận
+"Nhân viên"-> System: 5b1. Từ chối tiếp nhận
+System--> "Cư dân": 5b2. Gửi thông báo từ chối tiếp nhận
 
 end
 @enduml

@@ -1,18 +1,18 @@
 @startuml
 
-participant NhanVien
+participant "Nhân viên"
 
 participant "Hệ thống" as System
 participant "Cơ dở dữ liệu" as CSDL
 
 
 activate System
-NhanVien -> System: 1. Chọn module "Quản lý thu phí"
-NhanVien -> System: 2. Chọn "Thông báo phí"
+"Nhân viên" -> System: 1. Chọn module "Quản lý thu phí"
+"Nhân viên" -> System: 2. Chọn "Thông báo phí"
 System -> System: 3.Hiển thị danh sách thông báo thu phí
-NhanVien -> System: 4. Chọn button "Tạo thông báo phí"
+"Nhân viên" -> System: 4. Chọn button "Tạo thông báo phí"
 System -> System: 5. Hiển thị popup "Tạo thông báo phí"
-NhanVien -> System: 6. Nhập thông tin thông báo phí và nhấn "Gửi thông báo"
+"Nhân viên" -> System: 6. Nhập thông tin thông báo phí và nhấn "Gửi thông báo"
 System -> CSDL: 7. Kiểm tra gửi thành công
 
 alt Gửi thành công
