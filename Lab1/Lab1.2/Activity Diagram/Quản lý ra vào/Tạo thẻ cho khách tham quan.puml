@@ -1,25 +1,25 @@
 @startuml
-|User2|
-|User1|
-:Yêu cầu thêm thẻ ra vào cho User1;
-|Staff|
-:Yêu cầu đưa ra thông tin thẩm quyền;
-|User2|
-:Cung cấp thông tin;
-|Staff|
+|Khách của cư dân|
+|Cư dân|
+:1. Yêu cầu thêm thẻ ra vào cho User1;
+|Nhân viên|
+:2. Yêu cầu đưa ra thông tin thẩm quyền;
+|Khách của cư dân|
+:3. Cung cấp thông tin;
+|Nhân viên|
 if(Kiểm tra thông tin của người bảo hộ) then (Không hợp lệ)
-:Từ chối tiếp nhận;
+:4. Từ chối tiếp nhận;
 stop
 else (Hợp lệ)
-:Yêu cầu cung cấp thông tin user1;
-|User1|
-:Cung cấp thông tin;
-|Staff|
-:Nạp thông tin vào thẻ mới;
+:5. Yêu cầu cung cấp thông tin user1;
+|Cư dân|
+:6. Cung cấp thông tin;
+|Nhân viên|
+:7. Nạp thông tin vào thẻ mới;
 |Hệ thống|
-:Nạp thông tin;
+:8. Nạp thông tin;
 endif
-|Staff|
-:Gửi thẻ cho khách hàng;
+|Nhân viên|
+:10. Gửi thẻ cho khách hàng;
 stop
 @enduml

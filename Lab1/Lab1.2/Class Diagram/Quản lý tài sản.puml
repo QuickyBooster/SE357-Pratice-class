@@ -28,6 +28,6 @@ class Entity{
 }
 
 GroupEntity "1"--"*" Entity
-Contract "1"--"*" GroupEntity
+' Contract "1"--"*" GroupEntity
 
 @enduml

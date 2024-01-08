@@ -1,17 +1,17 @@
 @startuml
-|Admin|
+|Quản lý|
 start
-:Công bố quyết định kiểm kê;
-:Thành lập hội đồng kiểm kê;
-|Staff|
-:Kiểm kê tài sản;
-:Nhập thông tin trạng thái tài sản;
-:Tạo biên bản kiểm kê;
-:Gửi biên bản kiểm kê;
+:1. Công bố quyết định kiểm kê;
+:2. Thành lập hội đồng kiểm kê;
+|Nhân viên|
+:3. Kiểm kê tài sản;
+:4. Nhập thông tin trạng thái tài sản;
+:5. Tạo biên bản kiểm kê;
+:6. Gửi biên bản kiểm kê;
 |Hệ thống|
-:Lưu data;
-|Admin|
-:Nhận biên bản kiểm kê;
-:Báo cáo kết quả;
+:7. Lưu data;
+|Quản lý|
+:8. Nhận biên bản kiểm kê;
+:9. Báo cáo kết quả;
 stop
 @enduml

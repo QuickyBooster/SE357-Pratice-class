@@ -1,18 +1,18 @@
 @startuml
-|Staff|
+|Nhân viên|
 start
-:Kiểm tra tài sản;
-:Thêm vào danh sách thanh lý;
-:Thông báo admin;
-|Admin|
+:1. Kiểm tra tài sản;
+:2. Thêm vào danh sách thanh lý;
+:3. Thông báo Quản lý;
+|Quản lý|
 if (duyệt thanh lý từng tài sản) then (không đồng ý)
     |Hệ thống|
-    :Thông báo staff danh sách tài sản không được duyệt;
+    :4. Thông báo nhân viên danh sách tài sản không được duyệt;
 else (Đồng ý)
-    :Thông báo staff tài sản được duyệt;
+    :5. Thông báo nhân viên tài sản được duyệt;
 endif
-|Kế toán|
-:Thanh lý;
-:Nhập số tiền và giá tiền mỗi tài sản thanh lý được;
+|Nhân viên (Kế toán)|
+:6. Thanh lý;
+:7. Nhập số tiền và giá tiền mỗi tài sản thanh lý được;
 stop
 @enduml

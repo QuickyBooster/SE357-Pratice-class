@@ -1,42 +1,42 @@
 @startuml
-|Staff|
+|Nhân viên|
 start
-:Tạo yêu cầu mua mới thiết bị;
-:Điền các danh mục, giá cả, nhà cung cấp;
-|Hệ thống|
-:Tạo hợp đồng theo mẫu;
-|Staff|
-:Chỉnh sửa (nếu có) và gửi yêu cầu;
-|Admin|
+:1. Tạo yêu cầu mua mới thiết bị;
+:2. Điền các danh mục, giá cả, nhà cung cấp;
+|3. Hệ thống|
+:4. Tạo hợp đồng theo mẫu;
+|Nhân viên|
+:5. Chỉnh sửa (nếu có) và gửi yêu cầu;
+|Quản lý|
 if (xác nhận) then (Từ chối)
     |Hệ thống|
-    :Thông báo nhân viên;
+    :6. Thông báo nhân viên;
     stop
 else (Duyệt)
     |Hệ thống|
-    :Thông báo nhân viên;
+    :7. Thông báo nhân viên;
 endif
-|Staff|
-:Soạn hợp đồng;
-:Liên hệ nhà cung cấp;
+|Nhân viên|
+:8. Soạn hợp đồng;
+:9. Liên hệ nhà cung cấp;
 fork
     |Nhà cung cấp|
-    :Ký hợp đồng;
+    :10. Ký hợp đồng;
 fork again
-    |Admin|
-    :Ký hợp đồng;
+    |Quản lý|
+    :11. Ký hợp đồng;
 end fork
-|Kế toán|
-:Scan hợp đồng cho vào hệ thống;
+|Nhân viên(Kế toán)|
+:12. Scan hợp đồng cho vào hệ thống;
 |Hệ thống|
-:Lưu thông tin;
-|Kế toán|
-:Thanh toán 50%;
+:13. Lưu thông tin;
+|Nhân viên(Kế toán)|
+:14. Thanh toán 50%;
 |Nhà cung cấp|
-:Bàn giao thiết bị;
-|Kế toán|
-:Thanh toán 50%;
+:15. Bàn giao thiết bị;
+|Nhân viên(Kế toán)|
+:16. Thanh toán 50%;
 |Hệ thống|
-:Thông báo admin;
+:17. Thông báo quản lý;
 stop
 @enduml

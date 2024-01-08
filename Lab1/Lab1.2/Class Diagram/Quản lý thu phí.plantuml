@@ -1,6 +1,6 @@
 @startuml
 
-class Admin {
+class "Quản lý" {
   +viewListOfServiceRequests()
   +confirmServiceRequest()
   +processServiceRequest()
@@ -68,8 +68,8 @@ class ServiceRequest {
   +setRequestStatus(status: string): void
 }
 
-WebsiteAdmin --|> Admin
-Inhabitant --|> Admin
+WebsiteAdmin --|> "Quản lý"
+Inhabitant --|> "Quản lý"
 AppUser --|> Inhabitant
 AppUser --|> WebsiteAdmin
 AppUser --|> PaymentGateway

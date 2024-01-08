@@ -8,7 +8,7 @@ class CheckPoint{
     - entityId: string
     + entry(string userId)
     + openOnce()
-    + open(string: pathId)
+    + open(string: EntranceId)
     + close()
 }
 class Guest{
@@ -19,21 +19,21 @@ class Guest{
     - expirationDate: Datetime
     - allower: userId
     - urlIdPicture: string
-    - pathId: string
+    - entranceId: string
     + prolonged(float timeBySec)
     + revokeAccess()
 }
-class Path{
-    - pathId: string
-    + addPath(MinorPath path)
-    + removePath(MinorPath path)
+class Entrance{
+    - entranceId: string
+    + addEntrance(MinorEntrance Entrance)
+    + removeEntrance(MinorEntrance Entrance)
 }
-class MinorPath{
-    - pathId: string
+class MinorEntrance{
+    - entranceId: string
     - checkpointId: string
 }
-Path "1"--"1*" MinorPath
-CheckPoint "1"--"1*" MinorPath
-Guest "*"--"1" Path
+Entrance "1"--"1*" MinorEntrance
+CheckPoint "1"--"1*" MinorEntrance
+Guest "*"--"1" Entrance
 
 @enduml
