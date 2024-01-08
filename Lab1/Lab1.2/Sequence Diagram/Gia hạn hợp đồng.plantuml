@@ -10,21 +10,23 @@ activate System
 Quanly -> System: 1. Chọn hợp đồng
 Quanly -> System: 2. Tạo yêu cầu gia hạn hợp đồng
 Quanly -> System: 3.Chọn thời hạn
-NhanVien -> System: 4. Chọn button "Tạo thông báo phí"
-System -> System: 5. Hiển thị popup "Tạo thông báo phí"
-NhanVien -> System: 6. Nhập thông tin thông báo phí và nhấn "Gửi thông báo"
-System -> CSDL: 7. Kiểm tra gửi thành công
+activate Cudan
+System -> Cudan: 4. Gửi hợp đồng cho đối tác
+Cudan -> Cudan: 5. Kiểm tra thông tin
 
-alt Gửi thành công
-activate CSDL
-     CSDL --> System: 8. Hiển thị thông báo "Gửi thông báo thu phí thành công" 
+alt Chấp nhận
+Cudan --> System: 5a1. Gửi thông báo chấp nhận cho quản lý
+System--> Quanly: 5a2. Ký eSignature
 
+System-> Cudan: 5a3. Ký eSignature
 
-else Gửi không thành công 
-    CSDL --> System: 9. Hiển thị thông báo "Lỗi!!"
-    deactivate CSDL 
-    System -> System: 10. Hiển thị popup "Tạo thông báo phí"
+else Không chấp nhận
+    Cudan --> System: 5b1.Gửi thông báo yêu cầu đã bị từ chối cho Quản lý
+    deactivate Cudan
 end
+System -> System: 6. Lưu data
+System -> Quanly: 7. Thông báo gia hạn thành công
 
+System -> Cudan: 8. Thông báo gia hạn thành công
 deactivate System
 @enduml
