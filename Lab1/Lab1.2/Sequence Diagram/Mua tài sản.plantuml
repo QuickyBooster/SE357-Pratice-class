@@ -1,43 +1,49 @@
 @startuml
 
-participant "Nhân viên"
+participant "Nhân viên" as nv
 
 
 participant "Hệ thống" as System
-participant "Quản lý"
+participant "Quản lý" as ql
 
-participant "Nhà cung cấp"
-participant "Nhân viên(Kế toán)"
+participant "Nhà cung cấp" as ncc
+participant "Nhân viên(Kế toán)" as kt
 
 
+nv -> System: 1.Tạo yêu cầu mua mới thiết bị
 activate System
-"Nhân viên" -> System: 1.Tạo yêu cầu mua mới thiết bị
-"Nhân viên" -> System: 2.Điền các danh mục, giá cả, nhà cung cấp
-System --> "Nhân viên": 3. Tạo hợp đồng theo mẫu
-activate "Quản lý"
-"Nhân viên" -> "Quản lý": 4. Chỉnh sửa (nếu có) và Gửi yêu cầu xác nhận
-"Nhân viên" -> "Quản lý": 5. Gửi yêu cầu xác nhận
+System --> nv: 2. Tạo hợp đồng theo mẫu
+deactivate System
+nv -> ql: 3. Chỉnh sửa (nếu có) và Gửi yêu cầu xác nhận
 alt từ chối
-"Quản lý" --> System: 5a1. Thông báo từ chối
-System --> "Nhân viên": 5a2. Gửi thông báo từ chối
+    ql -> System: 4a1. Thông báo từ chối
+    activate System
+    System -> nv: 4a2. Gửi thông báo từ chối
 else duyệt
-"Quản lý" --> System: 5b1. Thông báo duyệt
-System --> "Nhân viên": 5b2. Yêu cầu soạn hợp đồng
-activate "Nhà cung cấp"
-"Nhân viên" -> "Nhà cung cấp": 5b3. Liên hệ nhà cung cấp kí hợp đồng
-activate "Nhân viên(Kế toán)"
-"Nhà cung cấp" -> "Nhân viên(Kế toán)": 5b5. Scan hợp đồng
-"Nhân viên" -> "Quản lý": 5b4. Yêu cầu kí hợp đồng
-"Quản lý" -> "Nhân viên(Kế toán)": 5b6. Scan hợp đồng
-"Nhân viên(Kế toán)" --> System: 5b7: Lưu thông tin
-System -> "Nhân viên(Kế toán)": 5b8: Yêu cầu thanh toán 50%
-"Nhân viên(Kế toán)" --> "Nhà cung cấp": 5b9: Thanh toán 50%
-"Nhà cung cấp" -> "Nhân viên(Kế toán)": 5b10: Bàn giao thiết bị
-"Nhân viên(Kế toán)" --> "Nhà cung cấp": 5b11: Thanh toán 50% còn lại
-deactivate "Nhân viên(Kế toán)"
-"Nhà cung cấp" --> System: 5b12: Xác nhận thanh toán
-deactivate "Nhà cung cấp"
-System -> "Quản lý": 5b13: Thông báo mua thành công
+    deactivate System
+    ql -> System: 4b1. Thông báo duyệt
+    activate System
+    System -> nv: 4b2. Yêu cầu soạn hợp đồng
+    deactivate System
+    par
+        nv -> ncc: 4b3. Liên hệ nhà cung cấp kí hợp đồng
+        nv -> ql: 4b4. Yêu cầu kí hợp đồng
+        ncc --> nv: Đã ký
+        ql --> nv: Đã ký
+    end
+    kt -> kt: 4b5. Scan hợp đồng
+    kt -> System: 4b6: Lưu thông tin
+    activate System
+    deactivate System
+    kt -> ncc: 4b7: Thanh toán 50%
+    ncc -> kt: 4b8: Bàn giao thiết bị
+    kt -> ncc: 4b9: Thanh toán 50% còn lại
+
+    kt -> System: 4b10: Xác nhận đã thanh toán toàn bộ
+    activate System
+
+    System -> ql: 4b11: Thông báo mua thành công
+    deactivate System
 end
 
 deactivate System

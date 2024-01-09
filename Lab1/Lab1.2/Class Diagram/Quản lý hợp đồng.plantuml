@@ -1,4 +1,4 @@
-@startuml
+
 
 abstract class  AContract {
   - aContractId: string
@@ -39,5 +39,3 @@ class Contract {
 
 class Contract extends AContract
 User "*"--"0*"Contract
-
-@enduml

@@ -26,22 +26,19 @@ class Guest{
 }
 class Entrance{
     - entranceID: string
-    + addEntrance(MinorEntrance Entrance)
-    + removeEntrance(MinorEntrance Entrance)
+    + addCheckPoint(CheckPoint a)
+    + removeCheckPoint(CheckPoint a)
 }
-class MinorEntrance{
-    - minorEntranceID: string
-    - entranceID: string
-    - checkpointID: string
-}
+
 class UserEntrance{
     - userEtranceID: string
     - userID: string
     - entranceID: string
 }
-Entrance "1"--"1*" MinorEntrance
-CheckPoint "1"--"1*" MinorEntrance
+
+CheckPoint "0*"--"1" Entrance
 Guest "*"--"1" Entrance
 UserEntrance "*"--"1" Entrance
+User "1"--"1" UserEntrance
 
 @enduml

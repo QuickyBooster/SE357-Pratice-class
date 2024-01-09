@@ -35,6 +35,8 @@ else Không tồn tại
          deactivate CSDL
 end
 System -> SMS: 6. Gửi tin nhắn SMS đến khách hàng
-
 deactivate System
+activate SMS
+deactivate SMS
+
 @enduml

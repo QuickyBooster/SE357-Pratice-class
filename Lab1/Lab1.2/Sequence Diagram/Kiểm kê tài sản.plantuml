@@ -5,16 +5,18 @@ participant "Nhân viên"
 participant "Hệ thống" as System
 
 
+"Quản lý" -> "Quản lý": 1. Công bố quyết định kiểm kê
+
+"Quản lý"-> System: 2. Thành lập danh sách nhân viên làm hội đồng kiểm kê
 activate System
-"Quản lý" -> "Nhân viên": 1. Công bố quyết định kiểm kê
-"Quản lý" -> "Nhân viên": 2. Thành lập hội đồng kiểm kê
-"Nhân viên" -> System: 3. Kiểm kê tài sản
-"Nhân viên" -> System: 4. Nhấn "tạo biên bản kiểm kê"
-System --> "Nhân viên": 5.Tạo biên bản kiểm kê
-"Nhân viên" -> System: 6. Nhập thông tin trạng thái tài sản
-System --> "Nhân viên": 7.Gửi biên bản kiểm kê
-System --> "Quản lý": 8.Gửi biên bản kiểm kê
-"Quản lý" -> System: 9.Báo cáo kết quả
+System -> "Nhân viên": 3.Thông báo nhiệm vụ của nhân viên
+deactivate System
+"Nhân viên" -> "Nhân viên": 4. Kiểm kê tài sản
+
+"Nhân viên" -> "System": 5.Cập nhật biên bản kiểm kê
+activate System
+
+System -> "Quản lý": 6..Gửi biên bản kiểm kê
 
 deactivate System
 @enduml

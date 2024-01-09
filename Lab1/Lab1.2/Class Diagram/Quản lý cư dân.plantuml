@@ -1,12 +1,7 @@
-@startuml
+
 
 
 class "Resident" {
-  -residentID: string
-  -name: string
-  -phoneNumber: string
-  -password: string
-  +changePassword(string newPass)
 }
 
 class Apartment {
@@ -29,10 +24,12 @@ class Building{
   -note: string
   -numberOfRoom: int
   -masterId: string
+  +changeMaster(string admin)
 }
 
 class Announcement {
   -announcementID: string
+  -creator: string
   -title: string
   -content: string
   -date: Date
@@ -42,5 +39,6 @@ class Announcement {
 
 
 Resident "*"--"*" Apartment
-
-@enduml
+Building "1"--"*" Apartment
+Staff"1"--"*"Announcement
+Resident "*"--"*"Announcement

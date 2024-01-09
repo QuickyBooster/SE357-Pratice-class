@@ -1,4 +1,4 @@
-@startuml
+
 class GroupEntity{
     - groupEntityId: string
     - name: string
@@ -30,4 +30,3 @@ class Entity{
 GroupEntity "1"--"*" Entity
 ' Contract "1"--"*" GroupEntity
 
-@enduml

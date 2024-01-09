@@ -15,15 +15,15 @@ System -> System: 4.Hiển thị popup chi tiết yêu cầu dịch vụ
 alt Xác nhận
 
    "Nhân viên" -> System: 5a1. Nhấn button "Đồng ý"
-       activate CSDL
    System -> CSDL: 5a2. Gửi yêu cầu kiểm tra thông tin
+       activate CSDL
 CSDL --> System: 5a3. Hiển thị thông báo"Chấp nhận yêu cầu thành công"
 
         deactivate CSDL
 else Không tồn tại  
     "Nhân viên" -> System: 5a2. Nhấn button "Từ chối"
-     activate CSDL
     System -> CSDL: 5b1. Gửi yêu cầu kiểm tra thông tin
+     activate CSDL
     CSDL--> System: 5b2. Hiển thị danh sách yêu cầu dịch vụ 
          deactivate CSDL
 end

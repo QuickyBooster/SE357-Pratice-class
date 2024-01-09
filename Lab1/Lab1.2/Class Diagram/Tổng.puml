@@ -1,0 +1,237 @@
+
+class CheckPoint{
+    - checkPointID: string
+    - location: string
+    - installationDate: Datetime
+    - active: bool
+    - upTime: float
+    - entityID: string
+    + entry(string userId)
+    + openOnce()
+    + open(string: EntranceId)
+    + close()
+}
+class Guest{
+    - guestID: string
+    - name: string
+    - cccd: string
+    - purpose: string
+    - date: Datetime
+    - expirationDate: Datetime
+    - allower: userId
+    - urlIdPicture: string
+    - entranceID: string
+    + prolonged(float timeBySec)
+    + revokeAccess()
+}
+class Entrance{
+    - entranceID: string
+    + addCheckPoint(CheckPoint a)
+    + removeCheckPoint(CheckPoint a)
+}
+
+class UserEntrance{
+    - userEtranceID: string
+    - userID: string
+    - entranceID: string
+}
+CheckPoint "0*"--"1" Entrance
+Guest "*"--"1" Entrance
+UserEntrance "*"--"1" Entrance
+
+
+
+
+class "Resident" {
+}
+
+class Apartment {
+  -apartmentID: string
+  -buildingID: string
+  -apartmentNumber: string
+  -floor: int
+  -numberOfRooms: int
+  -masterResidentID: string
+  -acreage: float
+  -note: string
+  -memberList: List<Member>
+  +addMember(Member member)
+  +changeMaster(string residentID)
+}
+class Building{
+  -buildingID: string
+  -buildingName: string
+  -numberOfFloor: int
+  -note: string
+  -numberOfRoom: int
+  -masterId: string
+  +changeMaster(string admin)
+}
+
+class Announcement {
+  -announcementID: string
+  -title: string
+  -content: string
+  -date: Date
+  -creator: string
+  -fileAttachedURL: List<string>
+  -receiver: List<string>
+}
+
+
+Resident "*"--"*" Apartment
+
+
+class Service{
+  - type: ServiceType
+  - detail: string
+  - dateRequest: Datetime
+  - dateApprove: Datetime
+  - dateDeliver: Datetime
+  - dateFinished: Datetime
+  - fee: float
+  - isApproved: bool
+  - approvedBy: string
+  - customerID: string
+  - appartmentID: string
+  - isAbort: bool
+  - workerID: List<string>
+  + approve(List<string> workers,Datetime dateWork, float fee,string approvedBy)
+  + deny(string reason)
+}
+enum ServiceType{
+  - Fix
+  - CleanHouse
+  - Laundry
+  - Transport
+}
+class Rate{
+  - serviceID: string
+  - residentID: string
+  - star: byte
+  - comment: string
+}
+
+
+abstract class  AContract {
+  - aContractId: string
+  - representedByA: string
+  - phoneNumberA: string
+  - emailA: string
+  - citizenIdA: string
+  - representedByB: string
+  - phoneNumberb: string
+  - emailb: string
+  - citizenIdb: string
+  - contractName: string
+  - date: Datetime
+  - value: float
+  - valueByString: string
+  - currency: string
+  - effectiveDate: Datetime
+  - expirationDate: Datetime
+  - content: string
+  - eSignatureA: string
+  - eSignatureB: string
+  + sendContract(string email, string header, string content)
+  + exportToPDF(string pathToSave)
+  + exportToWord(string pathToSave)
+  + makeAsTemplate(string pathToSave)
+}
+
+class Contract {
+  - contractId: string
+  - aContractId: string
+  - detail: string
+  + sendContract(string email, string header, string content)
+  + exportToPDF(string pathToSave)
+  + exportToWord(string pathToSave)
+  + makeAsTemplate(string pathToSave)
+}
+
+
+class Contract extends AContract
+User "*"--"0*"Contract
+
+class GroupEntity{
+    - groupEntityId: string
+    - name: string
+    - productId: string
+    - note: string
+    - dateBought: Datetime
+    - contractId: string
+    - warrantyExpirationDate: Datetime
+    - quantity: int
+    - active: bool
+    + removeQuantity(int minus)
+    + setActive(bool status)
+}
+
+class Entity{
+    - entityId: string
+    - groupEntityId: string
+    - note: string
+    - installationDate: Datetime
+    - position: string
+    - active: bool
+    - lastCheckDate: Datetime
+    - lastMachanicCheck: string
+    + updateLastCheckDate(Datetime timestamp)
+    + changeActive(bool status)
+    + changePosition(string position)
+}
+
+GroupEntity "1"--"*" Entity
+' Contract "1"--"*" GroupEntity
+class Receipt{
+  - receiptID: string
+  - creator: string
+  - customers: List<string>
+  - reason: string
+  - title: string
+  - fee: float
+}
+class Pay{
+  - receiptID: string
+  - datePay: Datetime
+  - method: string
+  - receipt: string
+  - residentID: string
+}
+class User{
+	-ID: string
+  -name: string
+  -phoneNumber: string
+  -password: string
+  +changePassword(string newPass)
+}
+class Admin {
+}
+class Resident{
+}
+class Staff{
+}
+class Member{
+  -CCCD: string
+  -name: string
+}
+
+Admin --|> User
+Resident --|> User
+Staff --|> User
+Building "1"--"*"Apartment
+Service "1"--"1"ServiceType
+Resident "1"--"*" Service
+Rate "1"--"1" Service
+Rate "*"--"1" Resident
+Apartment "1"--"*" Member
+Staff "1"--"*"Announcement
+Resident "0..*"--"0..*" Receipt
+Staff "1"--"*"Receipt
+Receipt "1"--"*"Pay
+UserEntrance "*"--"1" User
+Resident "*"--"*"Announcement
+Staff "1"--"*"Entity
+Pay "*"--"1"Receipt
+Resident "1"--"*"Pay
+Resident "*"--"*"Receipt

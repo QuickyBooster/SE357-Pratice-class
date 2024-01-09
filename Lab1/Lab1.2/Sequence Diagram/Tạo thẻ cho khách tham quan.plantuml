@@ -6,22 +6,20 @@ participant "Nhân viên"
 
 participant "Hệ thống" as System
 
-activate System
 "Cư dân" -> "Nhân viên": 1. Yêu cầu thêm thẻ ra vào cho khách
-"Nhân viên" -> System: 2. Yêu cầu đưa ra thông tin thẩm quyền
-System --> "Khách": 3. Yêu cầu cung cấp thông tin
-"Khách" -> System: 4. Nhập thông tin khách
-"Nhân viên" --> "Cư dân": 5. Xác nhận thông tin
+"Nhân viên" -> "Cư dân": 2. Yêu cầu đưa ra thông tin thẩm quyền
+"Cư dân" -> "Nhân viên": 3. Đưa ra thông tin
+"Nhân viên" -> "Nhân viên": 5. Xác nhận thông tin
 alt hợp lệ
-"Nhân viên" --> "Cư dân": 5a1. Yêu cầu cung cấp thông tin user1
-"Cư dân"-->"Nhân viên": 5a2. Cung cấp thông tin
-"Nhân viên"->System: 5a3. Nhập thông tin thẻ mới
-System-> System: 5a4. Lưu thông tin
-System--> "Nhân viên": 5a5. Tạo thẻ cho khách
-"Nhân viên"--> "Cư dân": 5a6. Gửi thẻ cho khách
+    "Nhân viên" -> "Khách": 5a1. Yêu cầu cung cấp thông tin Khách
+    "Khách"->"Nhân viên": 5a2. Cung cấp thông tin
+    "Nhân viên"->System: 5a3. Nhập thông tin thẻ mới
+    activate System
+    System-> System: 5a4. Lưu thông tin
+    System-> "Nhân viên": 5a5. Tạo thẻ cho khách
+    deactivate System
+    "Nhân viên"-> "Cư dân": 5a6. Gửi thẻ cho khách
 else không hợp lệ
-"Nhân viên"-> System: 5b1. Từ chối tiếp nhận
-System--> "Cư dân": 5b2. Gửi thông báo từ chối tiếp nhận
-
+    "Nhân viên"-> "Cư dân": 5b1. Từ chối tiếp nhận
 end
 @enduml

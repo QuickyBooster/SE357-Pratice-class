@@ -11,4 +11,8 @@ class Pay{
   - datePay: Datetime
   - method: string
   - receipt: string
+  - residentID: string
 }
+Pay "*"--"1"Receipt
+Resident "1"--"*"Pay
+Resident "*"--"*"Receipt
