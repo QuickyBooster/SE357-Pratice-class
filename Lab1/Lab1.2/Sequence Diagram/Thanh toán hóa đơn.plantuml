@@ -1,0 +1,26 @@
+@startuml
+
+participant Cudan
+
+participant "Hệ thống" as System
+participant "Cổng thanh toán" as CTT
+
+
+Cudan -> System: 1. Nhấn chọn thông báo phí dịch vụ
+activate System
+System -> System: 2. Hiển thị chi tiết thanh toán dịch vụ
+Cudan -> System: 3.Nhấn button "Thanh toán"
+System -> System: 4. Hệ thống hiển thị danh sách chọn phương thức thanh toán
+Cudan -> System: 5. Chọn phương thức thanh toán và nhấn button "Xác nhận"
+activate CTT
+System -> CTT: 6.Thanh toán
+CTT -> CTT: 7.Xác nhận thanh toán
+alt Thanh toán thành công
+CTT -> System: 7a1. Hiển thị màn hình thanh toán thành công
+    
+else Thanh toán không thành công
+CTT -> System: 7a2. Hiển thị thông báo "Lỗi!!! Vui lòng thử lại"
+end
+
+deactivate System
+@enduml
