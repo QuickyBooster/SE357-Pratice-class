@@ -1,0 +1,21 @@
+@startuml
+
+participant Cudan
+
+participant "Hệ thống" as System
+participant "Cơ dở dữ liệu" as CSDL
+
+
+Cudan -> System: 1.Chọn module "Dịch vụ"
+activate System
+System -> System: 2. Hiển thị danh sách dịch vụ
+Cudan -> System: 3. Chọn button dịch vụ cần thiết
+System -> System: 4. Hiển thị màn hình đăng kí dịch vụ
+Cudan -> System: 5.Nhập thông tin thời gian bắt đầu sử dụng dịch vụ
+System -> CSDL: 6.Lưu
+activate CSDL
+CSDL-> System: 7.Hiển thị thông báo "Đăng kí thành công"
+deactivate CSDL
+
+deactivate System
+@enduml
